@@ -1,0 +1,4270 @@
+1/24/2021
+
+On 1/1/2021
+-told Matt I would like to make him an app
+
+On 1/6/2021
+-Matt describes his bitcoin app he would like to have made
+
+Description: An app that compares the growth of bitcoin value vs.
+a selection from a collection of commodities, such as corn.
+
+For 18 days
+1. Started React Native tutorial with Max
+2. Started React Tutorial with Max
+3. Read Pro React pg.1 - 78
+4. Read React documentation
+5. React Hooks tutorial
+
+up to 1/24/2021
+
+************************************************************************
+
+Start app with:
+npm start
+
+Created the app using:
+expo init bits-n-bourbon
+
+Handling fonts by running:
+expo install expo-font @expo-google-fonts/inter
+
+***********************************************************************
+Corn
+-the original commodity Matt suggested we measure against bitcoins
+
+Bourbon
+-a type of American whiskey, distilled from a mash made primarily of corn
+
+Bits
+-a basic unit of information in computing and digital communications
+
+Bitcoins
+-a decentralized digital currency
+
+*************************************************************************
+
+Added Google Fonts to the code using this tutorial:
+https://docs.expo.io/guides/using-custom-fonts/
+-Rye
+-Roboto
+
+*************************************************************************
+
+React Native uses fetch()
+https://medium.com/enappd/how-to-make-api-calls-in-react-native-apps-eab083186611
+
+Charts in React Native with React-Native-SVG and D3.js
+https://cmichel.io/charts-in-react-native-svg-and-d3-js
+
+The top 8 React Native chart libraries for 2021
+https://blog.logrocket.com/the-top-8-react-native-chart-libraries-for-2021/
+
+
+*************************************************************************
+7 Type of Graph using React Native Chart Kit
+https://aboutreact.com/react-native-chart-kit/
+
+Code from the site:
+
+const MyLineChart = () => {
+  return (
+    <>
+      <Text style={styles.header}>Line Chart</Text>
+      <LineChart
+        data={{
+          labels:
+            ['January', 'February', 'March', 'April', 'May', 'June'],
+          datasets: [
+            {
+              data: [20, 45, 28, 80, 99, 43],
+              strokeWidth: 2,
+            },
+          ],
+        }}
+        width={Dimensions.get('window').width - 16}
+        height={220}
+        chartConfig={{
+          backgroundColor: '#1cc910',
+          backgroundGradientFrom: '#eff3ff',
+          backgroundGradientTo: '#efefef',
+          decimalPlaces: 2,
+          color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+          style: {
+            borderRadius: 16,
+          },
+        }}
+        style={{
+          marginVertical: 8,
+          borderRadius: 16,
+        }}
+      />
+    </>
+  );
+};
+
+***********************************************************************
+
+
+13 Best React Native Chart Libraries
+https://openbase.com/categories/js/best-react-native-chart-libraries?orderBy=RECOMMENDED&
+
+---------------------------------------------------------------------------
+
+1/26/2021
+
+Set up calls to an API using fetch
+
+Learned the difference between
+-onClick  (used in React with buttons)
+-onPress  (used in React Native with buttons)
+
+Now I am making the calls to the API with each click of the CALL DATA buttons
+
+Helpful articles to get the API working and the UI responding to events
+https://dev.to/nibble/what-is-useeffect-hook-and-how-do-you-use-it-1p9c#deps
+https://rapidapi.com/blog/react-hooks-fetch-data-api/
+https://reactjs.org/docs/hooks-effect.html
+
+Next Actions:
+Conditionally reveal and hide the data from the API
+
+-------------------------------------------------------------------------
+
+1/26/2021
+
+Next Actions:
+Pull data from the bitcoin API of your choosing
+Put it in a chart
+
+API I am starting with is
+https://twelvedata.com/
+
+A tutorial for using the API
+https://twelvedata.com/blog/first-introduction-getting-an-advantage-in-a-few-minutes
+
+This is their query generator. I think it takes a bit of time to get used to.
+It could be a good tool though
+https://twelvedata.com/api-query-generator
+
+This is where I got part of the first query---> I just pasted my API key to the end in place of the parameter
+https://twelvedata.com/docs#cryptocurrency
+
+************************************************************************************************************************
+
+More specifically, I need to figure out what tools to use to make a line chart.
+
+I could do two or three...
+
+********************************************************************************************************************
+
+Starting with this library:
+https://github.com/JesperLekland/react-native-svg-charts
+
+Installed
+https://github.com/react-native-svg/react-native-svg
+
+then ran
+npm install --save react-native-svg-charts
+
+and created LineChartExample.js file
+
+*********************************************************************************************************************
+
+---------------------------------------------------------------------------
+
+1/27/2021
+
+Next Action:
+
+Experiment with D3 chart
+-Completed
+
+Tomorrow:
+-Complete this tutorial:
+
+"Using React Native & D3"
+youtube.com/watch?v=gEHyyd9RU3s&t=665s
+
+------------------------------------------------------------------------
+
+
+1/28/2021
+**GIANT-SIZED TUTORIAL: 12 hours of D3**
+freeCodeCamp.org
+Data Visualization with D3.js - Full Tutorial Course
+https://www.youtube.com/watch?v=_8V5o2UHG0E
+
+Shows how to have a mutiline graph starting at 11:36:33
+
+**********************************************************************
+
+Ran the following commands to prepare the environment:
+npm install @react-native-community/art --save
+npx react-native link
+expo install react-native-svg
+
+**************************************************************************
+
+Building a Bar Graph in React Native Art using D3
+https://medium.com/@marshalmurphy/building-a-bar-graph-in-react-native-with-d3-react-native-art-9e03f4c6a273
+
+Build a React Native Crypto Currency Tracker [Part 1]
+https://medium.com/@michael.kimpton/build-a-react-native-crypto-currency-tracker-part-1-3ca404accbbb
+
+---------------------------------------------------------------------------------
+
+2/6/2021
+
+Realized I was using the wrong toolset, and that I needed to develop the app
+using Android instead of React Native.
+
+I didn't know enough about Android development to mimic that process effectively
+in React Native, plus the library for Android
+
+'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+was way more professional and advanced. I thought it would be easier to develop
+the app in Java than go through React to React Native without really understanding
+Android development in the first place. Too many degrees removed from the hardware
+and my understanding of what the code was modeling
+
+----------------------------------------------------------------------------------
+
+2/7/2021
+
+ Started Android Tutorial.
+
+ Covered the basics of Android development and file management
+ Covered XML's use in Android
+ Covered Layouts in Android
+ Learned about widgets/views
+ Learned about containers
+ Learned about ViewGroups
+ Learned how to import images
+ Learned how to style XML
+
+ 2/9/2021
+
+ Starting the Java portion of the tutorial
+
+ -------------------------------------------------------------------------------------------------
+
+ 2/14/2021
+
+ Starting the Bitcoin app development after completing the Android Udemy course
+
+ The issue is where to start.
+ My plan is to restart the Udemy course and follow along inside the Bitcoin App.
+ That will work, and I will have a working application
+
+ Also here is an important resource for make API calls:
+ https://developer.android.com/training/volley#:~:text=Volley%20is%20an%20HTTP%20library,easier%20and%20most%20importantly%2C%20faster.
+ It uses Volley
+ Volley is what is recommended for Android use
+
+How to Call REST API in Android
+https://www.youtube.com/watch?v=DpEg_UVkv6E
+This solution uses Volley
+
+*******************************************************************************************************
+
+Problem: Create a button that queries an API and renders the data queried into the chart
+
+1. Add the button to the activity_main.xml layout
+2. Create an anonymous class that responds to click event listener
+3. USe the Volley library to make a call to the API
+4. Parse the return data and prepare it for display in an ArrayList
+
+***This is not the algorithm, this is only a test.***
+
+
+Next Actions:
+Pull data from the bitcoin API of your choosing
+Put it in a chart
+
+API I am starting with is:
+https://www.coindesk.com/coindesk-api
+
+"CoinDesk provides a simple API to make its Bitcoin Price Index (BPI)
+data programmatically available to others.
+You are free to use this API to include our data in any application or
+website as you see fit, as long as each page or app that uses it includes
+the text “Powered by CoinDesk”, linking to our price page.
+CoinDesk data is made available through a number of HTTP resources,
+and data is returned in JSON format. Please do not abuse our service."
+
+By default it shows the last 31 days, but the API accepts parameters
+
+We offer historical data from our Bitcoin Price Index through the following endpoint:
+https://api.coindesk.com/v1/bpi/historical/close.json
+
+By default, this will return the previous 31 days' worth of data.
+This endpoint accepts the following optional parameters:
+
+Sample Request:
+https://api.coindesk.com/v1/bpi/historical/close.json?start=2013-09-01&end=2013-09-05
+
+Sample JSON Response:
+
+{
+ "bpi":{"2013-09-01":128.2597,
+     "2013-09-02":127.3648,
+     "2013-09-03":127.5915,
+     "2013-09-04":120.5738,
+     "2013-09-05":120.5333},
+ "disclaimer":"This data was produced from the CoinDesk Bitcoin Price Index. BPI value data returned as USD.",
+ "time":{"updated":"Sep 6, 2013 00:03:00 UTC",
+         "updatedISO":"2013-09-06T00:03:00+00:00"}
+}
+
+****************************************************************************************
+
+Pulling over the default data from the API and also experimenting with handling the data
+in the JSONObject
+Pulled new commit for the laptop
+
+get value from a JSONObject
+https://stackoverflow.com/questions/31681705/get-value-from-a-jsonobject
+
+This is the next step?
+How to iterate over a JSONObject?
+https://stackoverflow.com/questions/9151619/how-to-iterate-over-a-jsonobject
+
+And this tutorial is recommended:
+https://androidbeasts.wordpress.com/2015/08/04/json-parsing-tutorial/
+
+Do the tutorial
+
+------------------------------------------------------------------------------------------
+
+2/15/2021
+
+Found this material on using Volley to make a request
+https://developer.android.com/training/volley/request
+
+It is the same code in the video tutorial for Volley we used to get the Bitcoin App
+It is the recommended way in the Android website
+
+Realized the documentation for Volley is part of the Android website:
+https://developer.android.com/training/volley
+https://developer.android.com/training/volley/simple
+https://developer.android.com/training/volley/requestqueue
+https://developer.android.com/training/volley/request
+https://developer.android.com/training/volley/request-custom
+
+**************************************************************************************
+
+In Java you can pass interfaces to the constructor of a class as an argument
+
+ex.
+
+        JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET,
+                URL,
+                null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.e("Rest Response", response.toString());
+                        try {
+                            System.out.println(response.getJSONObject("bpi").get("2021-01-15"));
+                            System.out.println(response.getJSONObject("bpi").get("2021-01-16"));
+                            System.out.println(response.getJSONObject("bpi").get("2021-01-17"));
+                            System.out.println(response.getJSONObject("bpi").get("2021-01-18"));
+                            System.out.println(response.getJSONObject("bpi").get("2021-01-19"));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("Rest Response", error.toString());
+                    }
+                }
+        );
+
+
+******************************************************************************************
+
+Next Action:
+
+Use PEDAC to write the method to pass the API data to the chart
+
+--------------------------------------------------------------------------------------------
+
+2/15
+Successfully pulling the bitcoin info from the API and rendering the data in the line chart
+
+Now I need to create second call from an API for stocks and get the average prices of certain
+commodities over the same 30 day period
+
+
+----------------------------------------------------------------------------------------------------
+
+2/16
+
+Signed up for Quandl, a commodities API
+Key for the Quandl API: jQK7bCpMaRbK-nhd8QJW
+Quandl pushes data as .csv files, not JSON or XML
+
+ex.
+https://www.quandl.com/api/v3/datasets/EOD/AAPL.csv?api_key=jQK7bCpMaRbK-nhd8QJW
+
+*************************************************************************************************************
+
+Signed up for alphavantage
+Key for the Alphavantage API: MUNKENZ6QW4QPEDG
+up to 5 API requests per minute and 500 requests per day
+
+*************************************************************************************************************
+
+Signed up for marketstack
+Key for the MarketStack API: 86746e122918145ebf3f1473bf378d26
+up to 10000 requests a month
+https://marketstack.com/documentation
+
+ex. Querying historical data
+http://api.marketstack.com/v1/eod
+    ? access_key = YOUR_ACCESS_KEY
+    & symbols = AAPL
+    & date_from = 2019-01-01
+    & date_to = 2019-02-01
+
+
+Basic: $9.99 a month
+10,000 Requests / mo
+72 Stock Exchanges
+10 Years History
+End-of-Day Data
+Market Indices
+HTTPS Encryption
+Technical Support
+Commercial Use
+Intraday Data
+
+
+
+*************************************************************************************************************
+
+-----------------------------------------------------------------------------------------------------------
+
+2/18/2021
+
+Use Marketstack to get the historical stock data you need
+$9.99 a month
+Don't be a stupid cheap doof!
+
+--------------------------------------------------------------------------------------------------------------
+
+2/19/2021
+
+Not a doof!
+Signed up for Marketstack
+
+This is what I am trying to do:
+https://stackoverflow.com/questions/41634535/volley-multiple-request-how-to-call-more-than-1-request-in-one-activity
+
+or maybe this?
+https://stackoverflow.com/questions/33228364/need-to-send-multiple-volley-requests-in-a-sequence
+
+Maybe a little of both, not sure how...
+
+Show Matt the Bitcoin query. Let him know about the second call issue
+-Learn how to put the app on your phone
+
+**************************************************************************************************
+
+This is the example of how to use the Marketstack API
+https://api.marketstack.com/v1/eod?access_key=86746e122918145ebf3f1473bf378d26&symbols=CORN
+queries the API for data on Teucrium Corn Fund ETV (CORN) historical prices
+
+****************************************************************************************************
+
+Successfully refactored the code so that I can add multiple calls to the API in the Activity
+Some of the tools I used
+https://stackoverflow.com/questions/31323623/arraylist-not-initialized
+https://stackoverflow.com/questions/1200621/how-do-i-declare-and-initialize-an-array-in-java
+https://stackoverflow.com/questions/33228364/need-to-send-multiple-volley-requests-in-a-sequence
+https://developer.android.com/studio/debug
+
+****************************************************************************************************
+
+Added and successfully ran calls to the APIs for bitcoin and corn stock data
+Can retrieve data point values from the dataVals and cornVals ArrayList items
+
+Next Step
+-Create an algorithm for iterating over both Arraylist items and dividing each
+ element in each array by the matching index
+-Return the results of the operation in an Arraylist of Entry elements
+-pass that results Arraylist to the lineDataSet method to be plotted
+
+Showed me how to access JSON in Java:
+https://stackoverflow.com/questions/23703431/use-getjsonobjectint
+
+Figured out .getX() and .getY() by noodling around
+They are part of the MPAndroid
+com.github.mikephil.charting.data.BaseEntry
+
+Code Freeze for 2/20/2021
+
+----------------------------------------------------------------------------------------------------
+
+2/21/2021
+
+Successfully graphed the relationship between bitcoin price of one coin and the shares of a corn stock
+Total time from the first of the year until now: 51 days
+Total time from start of project until now: 45 days
+Total time from start of project until now (in weeks): 6 weeks
+Total time from start of project using Java/Android until now: 15 days
+Total time from start of project using Java/Android until now (in weeks): 2 weeks
+
+Next Step:
+Might help me style the chart:
+https://learntodroid.com/how-to-display-a-line-chart-in-your-android-app/
+
+How to install user apps as Android system apps:
+https://www.androidauthority.com/install-user-app-as-system-app-how-to-93522/
+
+----------------------------------------------------------------------------------------------------
+
+2/22/2021
+
+The drop down menu is called a Spinner in Android
+
+Android Drop Down List Tutorial
+https://www.youtube.com/watch?v=urQp7KsQhW8
+
+****************************************************************************************************
+
+Styling MPAndroid Charts
+17 video tutorial series about MPAndroid
+https://www.youtube.com/watch?v=N-_X6G1KgAY&list=PLFh8wpMiEi89LcBupeftmAcgDKCeC24bJ
+
+****************************************************************************************************
+
+https://stackoverflow.com/questions/26202655/how-to-change-chart-background-with-mpandroidchart-library
+
+if you want to Change Whole Screen Background Color
+
+ Barchart chart;
+ chart.setBackgroundColor(Color.rgb(0, 0, 0));//Set as a black
+ chart.setDrawGridBackground(false);//set this to true to draw the grid background, false if not
+
+****************************************************************************************************
+
+Created the spinner UI widgets using these commodities:
+
+CORN	Teucrium Corn Fund
+WEAT    Teucrium Wheat (WEAT)
+SOYB	Teucrium Soybean Fund
+CANE	Teucrium Sugar Fund
+
+and these bitcoin
+
+----------------------------------------------------------------------------------------------------
+
+2/23/2021
+
+For reference, here is the psuedocode I wrote for the division algorithm:
+
+//             For each element inside of two arrays of equal length
+//                -divide the value of the element at matching index i
+//                 with the value of the element at matching index i
+//                -return the result of each division to cornBitCoin array at matching index i
+//                -return cornBitCoin arrayList element
+
+****************************************************************************************************
+
+Move the bitcoin from coindesk to marketshare
+1. You won't have to mention coindesk in the app
+2. You will be able to have much more control over the dates you query
+
+The queries are going to get expensive though
+We need to find a way to store the data in SQL after the first query
+We also will have to check for the data in the database first before we query the API
+-this will save us even more queries in the future
+
+Start looking for how to use SQL in Android
+
+****************************************************************************************************
+
+I prepped the application for using the four commodity stocks by setting up the calls to the API
+The data is being pulled over
+
+****************************************************************************************************
+
+This tutorial will show me how to set up an event listen on the Spinner so that I select the commodity
+API that will be used to populate the line chart
+https://www.youtube.com/watch?v=N4PuIa1P0PM
+
+----------------------------------------------------------------------------------------------------
+
+2/24/2021
+
+CoinLayer: the Best Bitcoin API so far
+
+https://coinlayer.com/documentation
+The coinlayer API is capable of delivering accurate exchange rate data for more than 385 cryptocurrencies in real-time.
+
+****************************************************************************************************
+
+
+I thought these comments were true:
+//You could get the Bitcoin BITC from marketstack.com.
+//You would then have a consistent way that we are pulling data in, plus it would let you do more than query 30 days exclusively.
+//It would also solve the rolling date error:
+//String URL1="https://api.marketstack.com/v1/eod?access_key=86746e122918145ebf3f1473bf378d26&symbols=BITC";
+
+But I found out I was wrong. There is no API data for bitcoin prices in marketstack.com
+because Bitcoin is not a stock, it is a commodity whose price is tracked
+
+Continue using the current Bitcoin price API
+
+----------------------------------------------------------------------------------------------------
+
+2/25/2021
+
+Was thinking of the Landscape UI layout and being able to add more than 4 or 5 stocks to the UI to compare to Bitcoin
+https://stackoverflow.com/questions/20238513/android-limit-the-no-of-items-displayed-in-a-spinners-dropdown-list
+
+----------------------------------------------------------------------------------------------------
+
+Using one API key hardcoded into the app
+-The key can be copied and distributed to others. Multiple unknown users using our key to call the API for free
+
+Having users register for the API
+-the users have to register and pay for use?
+-the user has to spend time registering for the API
+-the user is prone to error in registering, we would have to provide some support
+
+There is no known solution to this problem
+
+----------------------------------------------------------------------------------------------------
+
+2/27/2021
+
+Found a Candlestick chart tutorial for MPAndroidChart
+https://medium.com/@neerajmoudgil/candlestick-chart-using-philjay-mpandroidchart-library-how-to-bf657ddf3a28
+
+Look at Yahoo finance API
+
+****************************************************************************************************
+
+This is the stuff I read before I realized we needed a server.
+
+I was trying to find a way to integrate the multiple APIs into one sign-up,
+and I realized that wasn't possible. That I needed to pull the data into one place,
+store it in a database, then update it with one API call daily.
+
+And that our users needed to come to our site, sign up and query the data we serve:
+
+CoinDesk provides a simple API to make its Bitcoin Price Index (BPI) data programmatically available to others.
+https://www.coindesk.com/coindesk-api
+
+A Beginner's Guide to APIs: How to Integrate and Use Them
+https://snipcart.com/blog/integrating-apis-introduction
+
+INTEGRATING APIS AND MOBILE APPS
+https://www.altova.com/blog/integrating-apis-and-mobile-apps/
+
+Using 3rd Party APIs: Practical Android Java Development Part 47
+https://www.youtube.com/watch?v=Ag2Rrqum_pw
+
+Integrating Google Sign-In into Your Android App
+https://developers.google.com/identity/sign-in/android/sign-in
+
+Is it standard to make each user sign up for a 3rd party API key?
+https://stackoverflow.com/questions/41521365/is-it-standard-to-make-each-user-sign-up-for-a-3rd-party-api-key
+
+Enable and disable APIs
+https://support.google.com/googleapi/answer/6158841
+
+Where do you store third-party API ApiKey that you use in your javascript web app?
+https://stackoverflow.com/questions/50948555/where-do-you-store-third-party-api-apikey-that-you-use-in-your-javascript-web-ap
+
+Start Integrating Google Sign-In into Your Android App
+https://developers.google.com/identity/sign-in/android/start-integrating
+
+****************************************************************************************************
+
+Pay to use charting library
+Costs 2000 per developer the first year!
+https://store.scichart.com/?_gl=1*i7e0cl*_ga*MzM0NDY5NTcxLjE2MTQ0NjI2NjY.*_ga_W8KDLC098S*MTYxNDQ2MjY2NS4xLjEuMTYxNDQ2MjcwOS4xNg..
+
+****************************************************************************************************
+
+So I find myself at the forkroad again, trying to pick the tech to use for the next phase of this project
+
+Node?
+Java?
+MongoDB?
+SQL?
+
+****************************************************************************************************
+
+Using API keys correctly to build secure environments:
+https://www.freecodecamp.org/news/best-practices-for-building-api-keys-97c26eabfea9/
+
+Embedding React apps inside WordPress sites
+https://rockiger.com/en/easily-embed-react-apps-into-wordpress-with-reactpress-plugin/
+
+Series of Wordpress/React tutorials
+https://wp-and-react.com/embedding-react-application-inside-wordpress-page/#/
+
+----------------------------------------------------------------------------------------------------
+
+3/4/2021
+
+Using Material Design Themes and Manipulating Color in Android Apps
+https://material.io/blog/android-material-theme-color
+https://material.io/develop/android/theming/color
+
+----------------------------------------------------------------------------------------------------
+
+3/5/2021
+
+In the Android tutorial, the developer uses click listeners on card objects to take the user to other
+activities.
+
+That is brilliant.
+
+I will not be using buttons to trigger motion to an Activity,
+each Activity will be represented on the MainActivity screen as a card that can be selected
+
+So make the two cards now, one for the CandleStick Activity and one for the Stock/Bitcoin Change comparison
+
+Once the cards exist move the Stock/Bitcoin code to it's own Activity
+
+****************************************************************************************************
+
+Used this in finding the solution to exporting Activity error:
+https://stackoverflow.com/questions/40464824/error-running-second-activity-the-activity-must-be-exported-or-contain-an-inten
+
+Put android:exported="true" in the <activity> tag
+<activity android:name=".secondActivity"
+    android:exported="true">
+
+
+****************************************************************************************************
+
+How to build a Material Theme
+https://github.com/material-components/material-components-android-examples/tree/develop/MaterialThemeBuilder
+
+----------------------------------------------------------------------------------------------------
+
+3/6/2021
+
+Binance API Tutorial
+https://www.youtube.com/watch?v=rvhnz1yBHgQ&list=PLvzuUVysUFOuB1kJQ3S2G-nB7_nHhD7Ay
+
+----------------------------------------------------------------------------------------------------
+
+3/7/2021
+
+The CandleEntry constructor takes 5 arguments that will be used to construct the Candle Stick
+
+These values have the following names in the Binance API:
+
+Open time
+Open
+Close
+High
+Low
+
+The variables in the CandleEntry constructor have the following identifiers:
+
+x
+shadowH
+shadowL
+open
+close
+
+And this is how those variables will be assigned their values:
+
+1. x - unique identifier ==> will be filled by 'Open time' value
+2. shadowH - the value of the wick ==> will be filled by High
+3. shadowL - the value of the tail ==> will be filled by Low
+4. open - the opening value for the ticker ==> will be filled by Open
+5. close - the closing value for the ticker ==> will be filled by Close
+
+___________________________________________________________________________________________________
+
+3/8/2021
+
+response.getJSONArray() returns a JsonArray object and should be instantiated using the JsonArray class
+
+----------------------------------------------------------------------------------------------------
+
+3/10/2021
+
+I think Volley might be making continuous calls to the api
+How to change Volley refresh rate
+https://stackoverflow.com/questions/34388062/how-to-change-volley-request-rate/40072208
+
+----------------------------------------------------------------------------------------------------
+
+Successfully created a candlestick chart from API data
+-Used Binance API with a limit of 3 days
+"https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=3"
+
+I still need to clarify the use of dataVals
+I still need to clarify the use of candleVals
+I still need to clarify the use of candlesticks
+
+dataVals is unnecessary, it is a alias for candlesticks
+Leave it for now.
+
+Total number of days since the start of the project: 62
+
+----------------------------------------------------------------------------------------------------
+
+3/12/2021
+
+To solve the bug in the program, give the spinner variables default values to start with
+
+Here is the best debugger tutorial info you will find:
+https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-3-testing,-debugging,-and-using-support-libraries/3-1-c-the-android-studio-debugger/3-1-c-the-android-studio-debugger.html#relatedpractical
+https://developer.android.com/codelabs/android-training-using-debugger#7
+
+Those two debugger links are related. Use those to debug the application
+
+----------------------------------------------------------------------------------------------------
+
+3/15/2021
+
+Switched from 'open' to 'adj_open' in the Commodity/Bitcoin section of the app
+open was sending null values that could not be used
+This same problem continues to persist. You will be alerted to the lines where you might have to make changes
+in the Run log. Find key value pairs that do not have "null" for the value
+
+Right now there are a few array values that need to use adj_open instead of open
+
+*****************************************************************************************************
+
+Article that showed my how to make the app dark colors:
+https://chris.banes.dev/daynight/
+==> I just added these lines of code to the MainActivity.java file:
+//AppCompatDelegate.setDefaultNightMode(
+//    AppCompatDelegate.MODE_NIGHT_YES);
+
+-----------------------------------------------------------------------------------------------------
+
+3/16/2021
+
+App demo basically complete except for a bug in the Commodities/Bitcoin chart
+
+To fix the bug, preload the CORN data into the chart as soon as you enter the page.
+The error is triggered when a stock ticker is not selected the first time the Activity is loaded and
+the Query Bitcoin API button is pressed. With no ticker selected there is nothing to query and an error
+gets thrown. The App stops running
+
+****************************************************************************************************
+
+----------------------------------------------------------------------------------------------------
+
+3/18/2021
+
+Was curious if I could use local host to serve the binance api as the BTC Candlestick like so:
+
+switch (cryptoTicker) {
+                    case "BTC": {
+                        selectedURL="http://localhost:5000/BTC";
+                    }
+                    break;
+
+I had already added the /BTC to the server, and called the /BTC in Postman
+
+Attempting to use http://localhost:5000/BTC I got this error:
+E/Rest Response1 Error: com.android.volley.NoConnectionError: java.io.IOException: Cleartext HTTP traffic to localhost not permitted
+
+I think the following article has the solution to the error
+https://codechacha.com/en/android-cleartext-http-traffic-issue/
+
+or this one:
+https://medium.com/@son.rommer/fix-cleartext-traffic-error-in-android-9-pie-2f4e9e2235e6
+
+or this one:
+https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
+
+
+*******************************************************************************************************************
+
+Once it works I can set the server up in AWS, THEN I can work on the database
+I don't need the database to set up the AWS server, and it really won't matter anyway
+
+But the question made me think about security and Android
+Here is a tutorial I should look at:
+https://www.raywenderlich.com/10056112-securing-network-data-tutorial-for-android
+
+****************************************************************************************************
+
+But then I thought I should make the local server https. That might be the correct solution:
+Google query ==> how to make localhost https
+
+How to get HTTPS working on your local development environment in 5 minutes(only works for Macs)
+https://www.freecodecamp.org/news/how-to-get-https-working-on-your-local-development-environment-in-5-minutes-7af615770eec/
+
+I think that might be right:
+
+Make http://localhost:5000/BTC
+into https://localhost:5000/BTC
+
+and change the server to using https
+https://web.dev/how-to-use-local-https/
+
+----------------------------------------------------------------------------------------------------
+
+3/19/2021
+
+Then I realized I needed to just run the program and start troubleshooting the error all over again
+
+
+The problem was that for the phone, and the app in the phone, the code
+
+String URL="http://localhost:5000/BTC";
+
+and
+
+selectedURL="http://localhost:5000/BTC";
+
+resolved to nothing. There is no local host on the phone, remember, the phone is emulating an environment
+The local host for the phone would be a server on the phone, duh!
+
+So it wasn't about https, at least I don't think so...
+
+****************************************************************************************************
+
+How to Run Android Apps Against a localhost API (Tutorial)
+https://www.youtube.com/watch?v=cjNW2noShM0
+
+Find my computer's IP address
+https://support.microsoft.com/en-us/windows/find-your-ip-address-f21a9bbc-c582-55cd-35e0-73431160a1b9
+
+or ipconfig
+
+This is my computer's IP address
+192.168.0.13
+
+added that to the space for local host
+
+String URL="http://192.168.0.13:5000/BTC";
+selectedURL="http://192.168.0.13:5000/BTC";
+
+Still got the error about https
+
+Added an s to the code:
+String URL="https://192.168.0.13:5000/BTC";
+selectedURL="https://192.168.0.13:5000/BTC";
+
+And I got the error
+javax.net.ssl.SSLException: Unable to parse TLS packet header
+
+Then I thought I might have asked the wrong question.
+Instead of "how to make local host https"
+I should have asked "how to make express https"
+
+Enabling HTTPS on express.js
+https://stackoverflow.com/questions/11744975/enabling-https-on-express-js
+
+
+https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
+
+***************************************************************************************************
+
+This works if I want the clear text solution
+https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
+Just add android:usesCleartextTraffic="true" inside the in AndroidManifest.xml file
+
+
+****************************************************************************************************
+
+This is what I need to do to host the server on AWS in a way that will
+allow me to make calls from Android
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/SSL-on-amazon-linux-2.html
+
+--------------------------------------------------------------------------------------------------------
+
+4/29/2021
+
+Back to the UI again after developing the server to match the basic queries.
+Need to find an API for crypto data.
+Need to find an API for commodities data.
+
+Temp fix for the rolling 30 day query problem:
+
+How to get the 30 days back date in java based on given date [duplicate]
+https://stackoverflow.com/questions/17046956/how-to-get-the-30-days-back-date-in-java-based-on-given-date
+
+Added this to the Array creator for the bpi data:
+LocalDate.now().minusDays( 30 ))
+.
+.
+.
+LocalDate.now().minusDays( 1 ))
+
+Now I don't need to refresh the code each day.
+I did need to change minSdkVersion
+
+  defaultConfig {
+        applicationId "com.example.mpchart01"
+        minSdkVersion 26
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    from 21 to 26
+
+Also I will have to address the one-off problem when the server gets updated with data from the end of the day
+This current solution works by not using any data from today in creating the trendline
+For a $1.00 app this might not be bad
+
+Next, I need to make it into a loop that gets data from the user, so when the user selects
+7 days or 30 days or x days the array created will be that length and the comparison performed by the app
+will reflect the size of the dataset selected by the user
+
+****************************************************************************************************************
+
+What I want to do next is bring in similar daily values for the cryptos in the UI
+-ETH
+-LTC
+-BCH
+
+But really you want that data for multiple cryptos
+You need to select a crypto API, or you need to write code to process the data from api.binance.com
+Check out Coindesk too
+
+***********************************************************************************************************************
+
+Potential API solution:
+https://www.coinapi.io/Pricing
+
+Has historical data from cryptos from all over the world
+
+$0 - 100 daily requests
+$79 - 1000 daily requests
+
+If I set up the database to call once a day for this trendline data, then this is the perfect solution
+
+It has all the API info I will need I think, I need to check what the restrictions are for historical queries
+
+********************************************************************************************************************
+
+This is looking even better
+
+https://coinmarketcap.com/api/pricing/
+
+...until I saw the pricing
+
+****************************************************************************************************************
+
+so far this is the best
+
+https://min-api.cryptocompare.com/pricing
+
+Personal - $ 0.00 / mo.
+For personal / non-commercial projects. Capped at 250,000 lifetime calls.
+
+Daily historical data
+Full
+Hourly historical data
+3 months
+Minute historical data
+1 day
+
+VS.
+
+License
+Commercial - $ 79.99 / mo.
+
+Calls / month
+250,000
+Daily historical data
+Full
+
+Hourly historical data
+1 year
+Minute historical data
+1 day
+
+Support
+Email
+
+There is a higher tier for $199.99 a month
+
+***********************************************************************************************************************
+
+Coinlayer is a great resource, it seems I found it earlier and lost it
+https://coinlayer.com/product
+
+They are owned by the same people who own Marketstack, the API I am using for Stock Ticker values
+https://apilayer.com/#products
+
+
+************************************************************************************************************************
+
+5/2/2021
+
+Successfully comparing many-to-many commodities vs. cryptos
+
+There is a bug, a 'double-click' bug
+-the user must 'double-click' the query in order to have the graph's UI present updated data
+-the query pulls the expected data on the first click, but the UI refresh requires an additional query
+-it's like we are one behind
+
+1. This behavior is correct
+Starting from the default,
+BTC
+
+it only takes one click to render the data for
+CORN/BTC
+WEAT/BTC
+SOYB/BTC
+CANE/BTC
+
+the app's action is fluid in that position.
+
+2. This is the error
+Starting from the default,
+BTC
+
+The user selects ETH
+and clicks the query button,
+the default BTC values are used to peform the calculation instead of ETH
+
+And if the user switches back to BTC, they have to 'double-click' to see the CORN/BTC comparison
+
+The selection of BTC is happening by default upon loading of the page.
+This value must be reassignable by the user before the first query performed by user action is initiated
+This wouldn't be the first query the app performs, it performs multiple upon start
+We are talking about selecting the URL of the first query to be requested by the user by interacting with the UI
+
+That query is not under user control, and it needs to be.
+
+The switch back to BTC not occurring immediately may be a different issue, or it may be the same issue
+
+*****We need to update selectedURL each time a crypto is selected by the user, before the query takes place*****
+
+*******************************************************************************************************************
+
+Realized these objects aren't special:
+
+        JsonArrayRequest objectRequest1 = new JsonArrayRequest(Request.Method.GET,
+                URL,
+                null,
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        Log.e("Ticker1 Response", response.toString());
+                        tickerDataFunction(response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("Rest Response1 Error", error.toString());
+                    }
+                }
+        );
+
+They are just calls to an API, the Android version of Axios for JavaScript?
+
+You can write code that does anything in the onResponse() method. That is the space where you
+manipulate the data that is returned from the API
+
+
+**********************************************************************************************************************************
+
+Starting Google searching about an event listener for spinners to update a variable once a click event occurs
+Found out there is no such thing, spinners do not use click events
+
+Spinners DO however use:
+
+AdapterView.OnItemSelectedListener
+https://developer.android.com/reference/android/widget/AdapterView.OnItemSelectedListener.html
+
+Then I found this article, which had the answer:
+
+Android Spinner: Get the selected item change event
+https://stackoverflow.com/questions/1337424/android-spinner-get-the-selected-item-change-event
+
+Implemented this code by putting the switch logic in the onItemSelected() method of the listener...
+
+spinnername.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+    @Override
+    public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+        // your code here
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parentView) {
+        // your code here
+    }
+});
+
+...and presto! I have many-to-many logic implemented in the stock vs. crypto activity
+
+------------------------------------------------------------------------------------------------------------------------
+
+5/11/2021
+
+Preparing the current demo app for release. Learned this is the correct way:
+
+About Android App Bundles
+https://developer.android.com/guide/app-bundle
+
+This is now the official way to sign your app
+
+Next Step:
+ do these:
+ https://developer.android.com/studio/publish/app-signing#generate-key
+https://developer.android.com/studio/publish/app-signing#sign-apk
+
+And check your release progress against these best practices:
+https://developer.android.com/distribute/best-practices/launch/launch-checklist
+
+Lots of important information here
+https://developer.android.com/studio/publish/app-signing#enroll
+
+
+******************************************************************************************************************************
+
+There is a difference between the Developer Account and the Merchant Account for Google Play Store
+
+
+Register for a Google Play Developer account
+https://support.google.com/googleplay/android-developer/answer/6112435
+
+Link a Google Play developer account to your payments profile
+https://support.google.com/googleplay/android-developer/answer/3092739
+
+***********************************************************************************************************************
+
+Set up the developer account:
+The developer account is under my name, William Parrish,
+and it is linked to btcbrunch@gmail.com
+Add $25 to the bill for btcbrunch
+
+***********************************************************************************************************************
+
+Found the page I've been looking for with instructions about preparing a test version
+https://support.google.com/googleplay/android-developer/answer/9859348?visit_id=637563867606243379-3281267823&rd=1
+
+********************************************************************************************************************
+
+Google Play wouldn't accept the name of the package because it started with com.example.btcbrunch
+I had to create a unique name
+I just removed the example part of the name
+What I didn't realize until I had to remove it was that example was actually a folder in the system's path
+and that the name of the package was actually a collection of files
+
+I also had to change some settings in the build.gradle file for the applicationId
+
+There was also the issue of changing version numbers, which you must do if you want to upload a new
+version of your application to Google Play
+
+*********************************************************************************************************
+
+Renamed the application's package in Android Studio
+https://stackoverflow.com/questions/16804093/rename-package-in-android-studio/29092698#29092698
+
+com.btcbrunch is the new package name/file path
+
+****************************************************************************************************************
+
+Successfully downloaded the application from the Google Play store
+
+The app has bugs:
+1. If you query the API too soon the app breaks
+2. The first time you install and try to start the app it breaks
+
+
+*********************************************************************************************************************
+
+The app is available as an Internal testing Release
+
+***********************************************************************************************************
+
+Matt now has a copy of the demo
+
+Next Step:
+Add a range of times you can pick from to have displayed
+Slice the UI up further, so that there are more tickers and cryptos to compare
+Present more information, it's useful to the UI's attractiveness
+
+1min
+5min
+15min
+30min
+1h
+2h
+4h
+6h
+12h
+1d
+1w
+1M
+
+We don't have this kind of API, our APIs present data by the day
+We don't need this kind of API either, our comparison is for trends over time
+So I should slice the time up in different units
+
+
+7d
+14d
+30d
+60d
+90d
+180d
+365d
+totald
+
+*********************************************************************************************************
+What I am doing wrong with my current design is having one button perform the query,
+when I should have 7 or eight predefined buttons to query and present, one for
+each of these time periods:
+
+7d
+14d
+30d
+60d
+90d
+180d
+365d
+totald
+
+So I need either one function that does it, or to write 7 or eight distinct functions
+
+I think this is simple enough that it can be one function
+
+Notice also of the other details of apps I like, such as
+-providing date and time
+-using the logos of the cryptos
+-extending the graph to the ends of the hardware screen
+-
+
+----------------------------------------------------------------------------------------------------------
+
+5/14/2021
+
+Official Material Design tutorials
+Material Android tutorials – Java
+https://material.io/develop/android
+
+So I realized why I was confused about what I had to do, I haven't thought enough about
+the stack of tech I will be working with.
+
+I need to use Android's XML based system to connect the UI to the logic
+I need to use Google's Material Design to create the presentation
+I need to use Java to carry out the logic of the application
+
+The Udemy Android tutorial would be a good place to start again
+And this tutorial from the Google Material website:
+https://material.io/develop/android
+
+It starts here
+https://codelabs.developers.google.com/codelabs/mdc-101-java#0
+
+I also need to read the MPAndroid documentation
+
+***************************************************************************************
+
+The main page for Google Material Design
+
+https://material.io/design
+
+*********************************************************************************************
+
+Add this to the app:
+
+Crypto News API
+Get the latest crypto news from the best news sources.
+Use our API and access clean and relevant crypto news data.
+https://cryptonews-api.com/
+
+This would be the brunch part of btcbrunch. The market talk.
+
+https://cryptonews-api.com/documentation
+
+*****************************************************************************************
+
+I have to do the Material Tutorials
+
+This isn't such a big deal. Do the second one first
+Build a Material theme
+https://material.io/resources/build-a-material-theme#product-architecture
+
+MDC-101 Android:Material Components (MDC) Basics (Java)
+https://codelabs.developers.google.com/codelabs/mdc-101-java#0
+
+**********************************************************************************************
+
+Resources
+Use Material tools, downloads, and interactive projects to simplify your workflow
+https://material.io/resources
+
+-------------------------------------------------------------------------------------------------
+
+5/16/2021
+
+Discovered Google charts:
+https://developers.google.com/chart/interactive/docs
+https://developers.google.com/chart/interactive/docs/gallery/candlestickchart
+
+Discovered CodeLabs by Google
+https://codelabs.developers.google.com/
+
+-------------------------------------------------------------------------------------------------------
+
+5/27/2021(duplicated in the Express server diary)
+
+For the past two weeks:
+Reviewed all the Java cards that I have
+Started viewing for the Java Certification exam
+Started the Android tutorial in Udemy again, and started The Perfect Date as a way to use the tutorial effective
+
+Found a beautifully crafted UI using MPAndroid for candlestick Charts
+https://www.programmersought.com/
+
+
+The main article that has all the links:
+https://www.programmersought.com/article/18353891317/
+
+The files are in the BTCBAdmin folder on the Desktop
+
+The challenge will be to understand the tutorial so completely that I know how to build something similar, true... but...
+
+The solution to the problem of copyright infringement is to create the UI as a mock independent of the code
+Then create code to bring the UI to life.
+This way the creation is original.
+It must be if it is using the UI to guide the code, and not the other way around
+
+Also once you understand the code you found you will know more about how MPAndroid works
+You will know what part is MPAndroid and what part is the developer
+
+So you need to write down the steps of developing the UI in a way that is a publishable formula
+-You should be able to explain in plain English how to build a candlestick UI using MPAndroid
+-Your methods should be described in story form, like a recipe, along a linear progression
+-You have to show why blocks of code are added
+-You should also show the ability to build it from scratch, method by method
+
+----------------------------------------------------------------------------------------------------------
+
+5/30/2021
+
+What I intend to accomplish:
+-Replace the QUERY BTCBRUNCH API button with multiple small buttons, preset to perform queries for different time lengths.
+7d
+14d
+30d
+60d
+90d
+180d
+365d
+totald
+
+1. Use the buttons in Android Studio
+-Write the query for each time period
+-Make sure the API call is successfully returned and graphed
+
+2. Create custom button images to replace the default buttons
+
+*************************************************************************************************************
+
+Google Searched: custom buttons for android photoshop
+
+Found the video below:
+
+Custom Button Design in Android Studio using Photoshop and 9-Patch
+https://www.youtube.com/watch?v=I7_KGtbsJGU
+
+---------------------------------------------------------------------------------------------------------------------------
+5/31/2021
+
+Coinlayer is a great resource, it seems I found it earlier and lost it
+https://coinlayer.com/product
+
+They are owned by the same people who own Marketstack, the API I am using for Stock Ticker values
+https://apilayer.com/#products
+
+The data is free to $9.99 for 5,000 queries a month
+It should have cheap data on 385 different crypto currencies
+
+*********************************************************************************************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Remember!!!! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+You can't use 'localhost:xxxx' in the code for the Android App
+'localhost' to the app means a server running on the phone, since the 'local' device is whatever is running
+the code, whether your phone or an emulator in Android Studio
+
+You must use the ip address of the Desktop
+We are using it's wifi NIC's address: 192.168.0.13
+
+Put that in the place of localhost and we were able to run the app
+
+
+Also, you must make sure the localhost server has completed it's first round of queries, otherwise
+the application will fail.
+
+You might be getting close to where you need a 'App Loading' screen for the sake of the user experience
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+6/1/2021
+
+I think I found the solution to the multiple button onClick problem:
+Multiple Buttons' OnClickListener() android
+https://stackoverflow.com/questions/25905086/multiple-buttons-onclicklistener-android
+
+The answer that I think is correct references this article:
+https://androidacademic.blogspot.com/2016/12/multiple-buttons-onclicklistener-android.html
+
+This appears to be a similar question:
+How can add same onClick for all imageView in Recyclerview?
+https://stackoverflow.com/questions/56965159/how-can-add-same-onclick-for-all-imageview-in-recyclerview/56965409?noredirect=1#comment100470609_56965409
+
+
+*********************************************************************************************************************************************************
+This solution makes use of what I just learned about setting the onClick property of the buttons in XML:
+https://stackoverflow.com/questions/25905086/multiple-buttons-onclicklistener-android
+
+You could set the property:
+
+android:onClick="buttonClicked"
+in the xml file for each of those buttons, and use this in the java code:
+
+public void buttonClicked(View view) {
+
+    if (view.getId() == R.id.button1) {
+        // button1 action
+    } else if (view.getId() == R.id.button2) {
+        //button2 action
+    } else if (view.getId() == R.id.button3) {
+        //button3 action
+    }
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6/2/2021
+
+Tried to modify the onCreate() method to take the bitCoinApiButton0.setOnClickListener code out and put it in the onClick() listener
+-was unsuccessful, although I think the attempt failed because I didn't bring over the buttons correctly
+-they were supposed to be instantiated in the onCreate method, not the onClick method
+-I think that is why the event listener wasn't firing off
+
+Started a different direction, placing a switch in the start of the onClick() and referencing
+the buttons instantiated in onCreate() by id.
+
+Printed out statements using System.out.println to test the click events attached
+to each of the buttons
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6/6/2021
+
+The Problem:
+The question I am working on is creating a listener for the Activity. We run onCreate, and then outside
+of onCreate a have an onClick listener. This listener listens for any click activity on the screen
+and runs the id of the view clicked in a switch. For what matches we want to query a specific amount of data
+and load it into the MPAndroid graph.
+
+1. The issue is that we need to pass data to a particular instance of this class
+
+requestQueue
+
+and that instance is local to the onCreate method, as are the variables in the MPAndroid chart probably... hmm
+
+Can I recreate the chart with each query? And just load that view into the same space in the Android window?
+It's not about the particular chart, it's just about the presentation of accurate information
+or preserving the state of the objects. Mutation is fine and deletion of data and views is fine too.
+
+So lets do this. Lets create a new instance of
+
+requestQueue in the onClick listener. And if we find we need to create a new chart in Java, lets see what
+gets presented to the UI, and if this solution will work of just creating new Views in the same location
+It doesn't matter with this application as long as it doesn't negatively impact UX
+
+2. The second instance of a class that we need access to are the spinners that hold the string information for
+Tickers and Cryptos. They are also declared in the onCreate method and I need access to them and their values
+At least I think I do at this point
+
+I am wondering if I can declare them globally also? and access them outside the range of onCreate?
+Or if I can just create new instances of the Spinner class in the onClick method and go from there?
+
+How to get Spinner value
+https://stackoverflow.com/questions/1947933/how-to-get-spinner-value
+
+**********************************************************************************************************************
+
+Next Step:
+-Start with a run of the code where we move the RequestQueue instance and the Spinners instance into
+the "local" space of the new Activity. You can reuse your variable declarations since each method has its' own scope.
+
+If this works then good. If not then
+
+-Try a run of the code where we move the RequestQueue instance and the Spinners instance into
+the "global" space of the Activity. See if you can access all the data normally, plus have access to those
+previously local variable instances in the onClick method.
+
+
+****************************************************************************************************************************
+
+Above I had a plan, but then:
+-I made the Buttons "global" AKA instance variables of the Activity class
+-Made the Spinners instance variables and returned the values of the spinner instances when a
+ time value button is clicked
+-Made the requestQueue an instance variable. Examine the results.
+-Made the URL variables instance variables and placed them in the onClick() method of the Activity class
+-Added mplinechart variable to the onClick() method
+-Added String selectedURL to the onClick() method also, just like the original onClick in the onCreate() method
+-Copied the selectedURL switch from the onClick() in onCreate and added it to each case of the view selection switch case
+ --A nested switch for each case
+-Created the 14 day endpoints on the API for the UI to query on the Express side
+-Query the database using the 14 day data in the browser as a test
+-Set up the UI with the proper query strings for each button
+-Set up all the endpoints on the Express server
+-Add objectRequest8 to requestQueue
+
+I finished with an annoying double click error. I have to double click to get up to date data. Why?
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+6/8/2021
+
+Fixed the double click error by moving this code to the end of the switch paths:
+
+  String finalSelectedURL = selectedURL;
+                        JsonArrayRequest objectRequest8 = new JsonArrayRequest(Request.Method.GET,
+                                selectedURL,
+                                null,
+                                new Response.Listener<JSONArray>() {
+                                    @Override
+                                    public void onResponse(JSONArray response) {
+                                        //Log.e("Crypto Ticker Response", response.toString());
+                                        cryptoValsInOnClick = tickerDataFunction(response);
+                                        System.out.println("This is a test of the cryptoValsInOnClick.size(), which may be useful as the new size variable value: " + cryptoValsInOnClick.size());
+                                        System.out.println("This is the selectedURL : " + finalSelectedURL);
+                                        System.out.println("This is the first value in the cryptoValsInOnClick arraylist: " + cryptoValsInOnClick.get(0).getOpen());
+                                    }
+                                },
+                                new Response.ErrorListener() {
+                                    @Override
+                                    public void onErrorResponse(VolleyError error) {
+                                        //Log.e("Crypto Response Error", error.toString());
+                                    }
+                                }
+                        );
+
+The calls work with one click, bringing back data at reasonable paces
+Each path potentially creates one instance of this object when selected:
+
+JsonArrayRequest objectRequest8
+
+********************************************************************************************************************************************
+
+Android Studio required I pass the selectedURL to finalSelectedURL. It even created the variable name "finalSelectedURL" identifier
+It worked beautifully. I think its funny, because those URLs are also the endpoints of the code on the Android side. They
+are directly connected to the buttons, they ARE the finalSelectedURL in a meaningful way. But not the way Java intends with the use of the
+keyword final. Just a weird logical loop where meaning in code is mingling with meaning in life.
+
+********************************************************************************************************************************************
+
+Next Steps:
+
+Recycle the Commodities switch in the onClick's switches paths endpoints
+Recycle the passing of data to the MPAndroid chart at the end of the onClick() method
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+6/9/2021
+
+
+The onResponse() method has to take it all the way home. It will hold all the functionality to rendering
+the data by setting it's values using the methods of the MPAndroid charting library.
+Each last leg of the code will initially iteratively have it's own copy of what will be turned into
+an object of some sort ChartData object of my own creation
+
+Everything going forward will be placed in the onResponse() of the switch options
+
+Next Step:
+Add numOfDaysCrypto to each endpoint on the Android side
+Add the commodityBitCoin ArrayList instances to each endpoint
+Add the Commodities Switch to each endpoint
+
+******************************************************************************************************************
+
+Currently passing the corn data over successfully, I think I have 365D data
+I also have the 60 day error being tossed which is good, it means I can control how many days are being used by
+
+Revamping the cornDataFunction to use an ArrayList to hold the response data and pass it to cornVals ArrayList
+
+-------------------------------------------------------------------------------------------------------------------------
+
+6/10/2021
+
+Let go of the additional ArrayList I was creating for cornDataFunction,
+it wasn't necessary and was complicating extraction of data from JSON objects
+
+Copied the for loop to each of the commodity methods to dynamically create the ArrayList that will be
+used to render data in the chart
+
+ex. for corn
+
+for (int i = 0; i < response.getJSONArray("data").length(); i++) {
+                //cornDataArrayList.add(i, response.getJSONArray("data").getJSONObject(i));
+                cornDataObj = new JSONObject[] {response.getJSONArray("data").getJSONObject(i)};
+                double coData = cornDataObj[0].getDouble("open");
+                cornVals.add(new Entry(i, (float) coData));
+            }
+
+The queries work so far except for wheat 360, the wheat data only goes back 254 days
+
+***************************************************************************************************************************
+
+I need to add the Android front-end to AWS Code Commit
+I don't have a version control system in place for the app right now hahahahaha!
+
+Next Step:
+This line right here:
+LineDataSet lineDataSet1 = new LineDataSet(commodityBitCoin, "Teucrium Fund ETV ("+ stockTicker + ") / Bitcoin");
+
+------------------------------------------------------------------------------------------------------------
+
+6/11/2021
+
+Added the rest of the code. Like I'm the Tech Lead cause we don't mess around.
+
+       LineDataSet lineDataSet1 = new LineDataSet(commodityBitCoin, "Teucrium Fund ETV ("+ stockSpinnerStrVal + ") / Bitcoin");
+       ArrayList<ILineDataSet> dataSets = new ArrayList<>();
+       dataSets.add(lineDataSet1);
+
+       LineData data = new LineData(dataSets);
+       mpLineChart.setData(data);
+       mpLineChart.invalidate();
+
+It works beautifully, and renders the larger datasets at close to the same speed as the smaller from my personal vantage
+There is a slight delay for 365 data
+
+
+********************************************************************************************************************************
+
+Completed the following:
+Isolated the code in the onCreate() that should more properly be run in onClick()
+Realized that the code runs perfectly without it. The two methods are independent
+Will create one additional path for sevenDays button.
+
+Successfully modified the onClick() method to add the sevenDay button
+btcbrunchapp1.0 is born
+
+Next Step:
+Clean up the unnecessary code
+
+----------------------------------------------------------------------------------------------------------------------------
+
+6/12/2021
+
+Tried to use the app on the phone. Could not get the phone to call the API
+Entered the API address manually
+
+How to resolve NoClassDefFoundError: Failed resolution of: Landroid/view/View$OnUnhandledKeyEventListener;
+https://stackoverflow.com/questions/52537638/how-to-resolve-noclassdeffounderror-failed-resolution-of-landroid-view-viewon
+
+  //implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core:1.5.0-alpha04'
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+6/13/2021
+
+Updated the calls to the API so that it is calling the correct endpoints for btcbrunchapi
+Successfully ran a test using the emulator, all data renders as expected
+Successfully ran a test using a physical device, all data renders as expected, except for the text of the buttons
+
+Next Step:
+Update the second Activity of the App, the Candlestick chart
+-It's calling an endpoint that is no longer supported
+-copy the design of the first Activity, and render the data based on time span buttons
+
+***************************************************************************************************************************
+
+Time since I added the additional time span buttons to the Commodity/Bitcoin Activity: 14 days
+
+**************************************************************************************************************************
+
+Added buttons to the UI in the .xml file
+
+Change the name of the first button to candle_stick_api_button0 in .xml and .java
+Implement View.onClickListener()
+Create an onClick() method that will allow you to interact with the buttons
+Added the buttons from the .xml to the .java file in the onCreate() method
+Set the onClickListeners for the buttons in the onCreate() method
+Add the bitcoin spinner to the onClick() method
+Add the MPAndroid Chart to the onClick() method
+Get the string value of the spinner onClick()
+Create a variable to store the URL string that will eventually be assigned once the user makes a selection
+Create a switch that calls each of the buttons by id
+Create a switch for each case of the parent switch that evaluates the value of the string in bitCoinSpinnerStrVal
+
+Next Step:
+
+Add API calls to each route on the switch
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+6/14/2021
+
+Matt is not interested in the Candlestick Activity, suspending programming
+
+Next Steps:
+Comment out the code in the files necessary to eliminate the Candlestick chart
+Turn the MainActivity into a splash screen with the logo while data loads
+Redirect to BitCoinVsStocksActivity using an Intent
+
+Complete this tutorial(not really a tutorial, just the code I need):
+Splash Screen Tutorial With Example In Android Studio
+https://abhiandroid.com/programming/splashscreen
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+6/15/2021
+
+Ordered the logo for the splash page. Use the best one.
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+6/16/2021
+
+Received the logo, it looks great. All three ideas are usable, 1 for the splash page and the other 2 for the website
+
+Decided to look for a different tutorial. Found this:
+
+How to Create Welcome Screen (Splash Screen) in Android Studio
+https://www.youtube.com/watch?v=jXtof6OUtcE
+
+Used this to solve the 'Handler is deprecated' error:
+https://stackoverflow.com/questions/65488410/handler-postdelayed-is-now-deprecated-what-function-to-call-instead
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+6/17/2021
+
+Splash screen is created
+The chart loads with accurate data except for 360 WEAT because WEAT only has data for 254 days
+
+So I need to know:
+-the complete list of cryptos that I have access to using the apis the way I am
+-the complete list of stocks that I have access to also
+
+I need to determine the needs of the stake holder
+-How many cryptos do you want to follow?
+-How many stocks do you want to follow?
+
+In order to parse the data for the stake holder, you need to go through the data first
+Then you slice it up as a report on what is needed. And what is needed is a final format
+
+Selected cryptos
+Selected stocks
+
+But Matt can't know what he's selecting from if you don't provide the data
+
+Next Step:
+Find out the answer to what stocks and cryptos the APIs are providing
+-How far back does the data go?
+
+Create a report for Matt, describing the problem of precious UI space and choosing the stocks/cryptos to represent
+This is the challenge of writing code without a final list
+
+******************************************************************************************************************
+
+But first:
+
+Create a array size check for each of the buttons. You don't want the application failing
+And better still, you would like to perform the next smaller calculation in the UI
+
+ex. you query WEAT for 365 days, but only 259 days are available
+solution #1: The API will display data for 180 days, not 259 or 365
+solution #2: The API will display data for 259 days
+
+*************************************************************************************************************
+
+Trying to find the tickers to use in the app
+
+Realized I could look up the industry sectors in the stock market and then start to find the most popular
+stocks in each industry
+
+Stock Market Sectors
+https://www.fool.com/investing/stock-market/market-sectors/
+
+Steel
+Aluminum
+Silver
+Gold
+Copper
+Oil
+Coal
+Diversified Metals
+Platinum
+Palladium
+Silver—lithium
+Cotton
+Coffee
+Corn
+Oats
+Wheat
+Soybeans
+Sugar
+
+**********************************************************************************************************
+
+AutoCompleteTextView
+-this is the way to handle the massive amount of stock tickers that the users will be choosing from
+-it starts auto-completing, limiting the range of stocks yet helping guide the user to the stock they want
+
+
+--------------------------------------------------------------------------------------------------------------
+
+6/18/2021
+
+Spoke with Matt about the list of commodities vs cryptos
+
+He wants 25 stocks/commodities weighted by industries and the top 25 cryptos by market cap
+Matt prefers gold, then entire markets like NASDAQ, then ETFs, then specific stocks
+Matt wants a balance of the industries if stocks are represented
+They can be on one spinner
+
+***************************************************************************************************************
+
+6/19/2021
+
+Started studying what the APIs I'm using have to offer in way of what Matt specified
+
+https://marketstack.com/search
+Stock Tickers & Exchanges
+Search 170,000+ stock ticker symbols from 70 exchanges supported by the marketstack stock market data REST API service.
+
+Great website for stock information:
+https://www.barchart.com/stocks/indices/nasdaq/nasdaq100
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+6/27/2021
+
+The goal is to complete the project by 6/30/2021
+
+Next Step:
+-Make final Ticker list
+-Write the server endpoints for the new Ticker
+-Test the endpoints
+-Push the changes
+
+
+****************************************************************************************************
+
+I think I may have found the answer to a scrollable spinner. Check it out
+
+Android: Unable to Scroll down a spinner
+https://stackoverflow.com/questions/50692666/android-unable-to-scroll-down-a-spinner/50923887
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+6/28/2021
+
+Completed:
+-Made final Ticker list
+-Created the server endpoints for the new Ticker
+-Tested the endpoints
+-Pushed the changes
+
+*************************************************************************************************************************
+
+Realized the size of the Android file is going to become a problem.
+Growing the server from 4 endpoint tickers to 25 will exponentially increase the size of the file in Android
+I need to reuse code, creating objects that hold functionality, and make the code neater and easier to understand
+
+The simplest thing to do would be to convert the obvious bloat
+The biggest pieces of code that can be converted into an object
+
+The first portion of code that stands out to me in this regard is this snippet:
+
+for(int i = 0; i <= numOfDaysCrypto - 1; i++) {
+    float result;
+    float cryptoPrice = cryptoValsInOnClick.get(i).getOpen();
+    float cornPrice = cornVals.get(i).getY();
+    result = cornPrice/cryptoPrice;
+    commodityBitCoin.add(new Entry(i, result));
+    LineDataSet lineDataSet1 = new LineDataSet(commodityBitCoin, "Teucrium Fund ETV ("+ stockSpinnerStrVal + ") / Bitcoin");
+    ArrayList<ILineDataSet> dataSets = new ArrayList<>();
+    dataSets.add(lineDataSet1);
+
+    LineData data = new LineData(dataSets);
+    mpLineChart.setData(data);
+    mpLineChart.invalidate();
+}
+
+Next Steps:
+Turn the above code into a class called ChartMaker
+
+***************************************************************************************************************
+
+Started the ChartMaker class
+
+It appears to be working well, these two lines in the Main Activity refer to the same object:
+System.out.println("This is the memory location of the variable mpLineChart from chartMaker.getMpLineChart()" + chartMaker.getMpLineChart());
+System.out.println("This is the memory location of the variable mpLineChart from the Main Activity" + mpLineChart);
+
+com.github.mikephil.charting.charts.LineChart{918cfae V.ED..... ......ID 0,28-1080,633 #7f0900d3 app:id/line_chart}
+
+So I think I can pull the code in the cases inside instances of the ChartMaker class
+
+AMZN
+BA
+BAL
+CANE
+CORN
+DBO
+DD
+ED
+GDX
+GOOG
+ICE
+IVV
+IVW
+IYE
+JJG
+JO
+JPM
+KO
+MSFT
+NDAQ
+SIL
+SLX
+SOYB
+UNH
+XOM
+
+-----------------------------------------------------------------------------------------------------------
+
+7/2/2021
+
+Updated the application by adding a class
+CommoditySelector
+
+The logic of the class comes from the switch for the commodities; I moved the switch into .selectCommodity()
+in the class CommoditySelector
+
+I create an instance of CommoditySelector in the onCreate() method
+I use getters and setters to update the data
+
+This shrinks the code tremendously
+
+------------------------------------------------------------------------------------------------------------
+
+7/4/2021
+
+Updated the application by adding a class
+CryptoSelector
+
+The logic of the class comes from the switch for the cryptos; I moved the switch into .selectCrypto()
+in the class CryptoSelector
+
+I create the instance of CryptoSelector in the case statement, then pass values to it's method .selectCrypto()
+
+*******************************************************************************************************
+
+Realized the purpose of the static keyword, its not just to make field values available as a single instance
+static also allows the same variable to be called in different classes, from different .java files, like a global variable
+
+ex.
+BitCoinVsStocksActivity.cryptoValsInOnClick = tickerDataFunction(response);
+
+*********************************************************************************************************
+
+It might be smart to rename some of the code so that it makes what is happening make sense, now
+that many of the relationships of the portions of code to other portions have changed
+
+ex.
+.selectCrypto()
+You might think this method is selecting the Crypto but the crypto is already selected
+This could be named something more like .displayRelationshipBetweenStockAndCrypto() because it starts the entire process of displaying
+the data
+
+****************************************************************************************************************
+Completed:
+-Look up the top cryptos from Binance API
+-select the finalist cryptos
+-add their endpoints to the btcbrunchapi code
+-push that code to the AWS ElasticBeanstalk environment
+-test the btcbrunchapi endpoints
+-add their tickers to strings.xml
+-create additional Volley instances in the CryptoSelector.java file
+-test the calls
+-test the calls on a physical device
+
+Next Step:
+Replace WEAT, don't remove, just replace(easier!)
+
+*****************************************************************************************************************
+
+The Binance API
+https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md
+
+This looks like a good source of information, and maybe a useful tool too:
+https://github.com/binance-exchange/binance-java-api
+
+All tickers supported by the Binance API
+https://stackoverflow.com/questions/55549499/how-to-retrieve-a-list-of-all-market-pairs-like-eth-btc-using-binance-api
+
+["BTC","LTC","ETH","NEO","BNB","QTUM","EOS","SNT","BNT","GAS","BCC","USDT","HSR","OAX","DNT","MCO","ICN","ZRX","OMG","WTC","YOYO","LRC","TRX","SNGLS","STRAT",
+"BQX","FUN","KNC","CDT","XVG","IOTA","SNM","LINK","CVC","TNT","REP","MDA","MTL","SALT","NULS","SUB","STX","MTH","ADX","ETC","ENG","ZEC","AST","GNT","DGD","BAT",
+"DASH","POWR","BTG","REQ","XMR","EVX","VIB","ENJ","VEN","ARK","XRP","MOD","STORJ","KMD","RCN","EDO","DATA","DLT","MANA","PPT","RDN","GXS","AMB","ARN","BCPT","CND",
+"GVT","POE","BTS","FUEL","XZC","QSP","LSK","BCD","TNB","ADA","LEND","XLM","CMT","WAVES","WABI","GTO","ICX","OST","ELF","AION","WINGS","BRD","NEBL","NAV","VIBE",
+"LUN","TRIG","APPC","CHAT","RLC","INS","PIVX","IOST","STEEM","NANO","AE","VIA","BLZ","SYS","RPX","NCASH","POA","ONT","ZIL","STORM","XEM","WAN","WPR","QLC","GRS",
+"CLOAK","LOOM","BCN","TUSD","ZEN","SKY","THETA","IOTX","QKC","AGI","NXS","SC","NPXS","KEY","NAS","MFT","DENT","IQ","ARDR","HOT","VET","DOCK","POLY","VTHO","ONG",
+"PHX","HC","GO","PAX","RVN","DCR","USDC","MITH","BCHABC","BCHSV","REN","BTT","USDS","FET","TFUEL","CELR","MATIC","ATOM","PHB","ONE","FTM","BTCB","USDSB","CHZ","COS",
+"ALGO","ERD","DOGE","BGBP","DUSK","ANKR","WIN","TUSDB","COCOS","PERL","TOMO","BUSD","BAND","BEAM","HBAR","XTZ","NGN","DGB","NKN","GBP","EUR","KAVA","RUB","UAH","ARPA",
+"TRY","CTXC","AERGO","BCH","TROY","BRL","VITE","FTT","AUD","OGN","DREP","BULL","BEAR","ETHBULL","ETHBEAR","XRPBULL","XRPBEAR","EOSBULL","EOSBEAR","TCT","WRX","LTO","ZAR",
+"MBL","COTI","BKRW","BNBBULL","BNBBEAR","HIVE","STPT","SOL","IDRT","CTSI","CHR","BTCUP","BTCDOWN","HNT","JST","FIO","BIDR","STMX","MDT","PNT","COMP","IRIS","MKR","SXP",
+SNX","DAI","ETHUP","ETHDOWN","ADAUP","ADADOWN","LINKUP","LINKDOWN","DOT","RUNE","BNBUP","BNBDOWN","XTZUP","XTZDOWN","AVA","BAL","YFI","SRM","ANT","CRV","SAND","OCEAN","NMR",
+"LUNA","IDEX","RSR","PAXG","WNXM","TRB","EGLD","BZRX","WBTC","KSM","SUSHI","YFII","DIA","BEL","UMA","EOSUP","TRXUP","EOSDOWN","TRXDOWN","XRPUP","XRPDOWN","DOTUP","DOTDOWN",
+"NBS","WING","SWRV","LTCUP","LTCDOWN","CREAM","UNI","OXT","SUN","AVAX","BURGER","BAKE","FLM","SCRT","XVS","CAKE","SPARTA","UNIUP","UNIDOWN","ALPHA","ORN","UTK","NEAR","VIDT",
+"AAVE","FIL","SXPUP","SXPDOWN","INJ","FILDOWN","FILUP","YFIUP","YFIDOWN","CTK","EASY","AUDIO","BCHUP","BCHDOWN","BOT","AXS","AKRO","HARD","KP3R","RENBTC","SLP","STRAX","UNFI","CVP",
+"BCHA","FOR","FRONT","ROSE","HEGIC","AAVEUP","AAVEDOWN","PROM","BETH","SKL","GLM","SUSD","COVER","GHST","SUSHIUP","SUSHIDOWN","XLMUP","XLMDOWN","DF","JUV","PSG","BVND","GRT","CELO",
+"TWT","REEF","OG","ATM","ASR","1INCH","RIF","BTCST","TRU","DEXE","CKB","FIRO","LIT","PROS","VAI","SFP","FXS","DODO","AUCTION","UFT","ACM","PHA","TVK","BADGER","FIS","OM","POND","ALICE",
+"DEGO","BIFI","LINA"]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7/7/2021
+
+Replaced WEAT with AAPL
+-added AAPL to the AWS API
+-added AAPL to the Android code
+
+********************************************************************************
+
+Now I have 365 data for all tickers in the app
+
+Every combination of stock/commodity and crypto present data
+
+**********************************************************************************
+
+Next Step
+
+
+Completed:
+Made C:\Users\willi\AndroidStudioProjects\MPChart01> the git folder
+
+
+
+Next Steps:
+Set up CodeCommit for the UI side of the project
+Commit your code to the AWS cloud
+
+This is the best page I've found so far, there are only two solutions and neither is for Android Studio
+https://stackoverflow.com/questions/47018049/setup-aws-codecommit-vcs-in-android-studio
+
+That previous solution is similar to the problem of piecing together Nginx, Linux, EC2s etc... instead of using Elastic Beanstalk
+
+https://stackoverflow.com/questions/14422151/what-is-the-difference-between-elastic-beanstalk-and-cloudformation-for-a-net-p
+Cloud Formation isn't a solution, its a tool to change together other AWS tools and resources by developer's whim
+
+AWS CloudFormation Documentation
+https://docs.aws.amazon.com/cloudformation/
+
+************************************************************************************************************************************************
+
+AWS CodeBuild
+Build and test code with continuous scaling. Pay only for the build time you use.
+https://aws.amazon.com/codebuild/
+
+Automatically build your Android app with AWS CodeBuild
+https://aws.amazon.com/blogs/mobile/automatically-build-your-android-app-with-aws-codebuild/
+
+AWS CodeBuild features
+https://aws.amazon.com/codebuild/features/
+
+****************************************************************************************************************************************
+
+
+Decided time to just go for like a Tech Lead:
+
+Next Step: Start this tutorial
+Build a CI/CD Pipeline for your Android App with AWS Services
+https://aws.amazon.com/blogs/mobile/build-a-cicd-pipeline-for-your-android-app-with-aws-services/
+
+Document everything in the red book
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+7/8/2021
+
+Realized the first line of the above tutorial starts out with this tutorial:
+
+Automatically build your Android app with AWS CodeBuild
+https://aws.amazon.com/blogs/mobile/build-a-cicd-pipeline-for-your-android-app-with-aws-services/
+
+Next Step:
+Save Android UI code to AWS CodeCommit
+
+This is what you are looking for?
+Migrate local or unversioned content to AWS CodeCommit
+https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-migrate-repository-local.html
+
+
+Wound up here:
+Connect to an AWS CodeCommit repository
+Connect a local repo to the CodeCommit repositor
+https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-connect.html
+
+Then here:
+Setup for HTTPS users using Git credentials
+https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-gc.html
+
+*****************************************************************************************************
+
+Didn't get the answer tonight, but I have a few options:
+
+Step 3: Set up the public and private keys for Git and CodeCommit
+Step 4: Connect to the CodeCommit console and clone the repository
+https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-ssh-windows.html
+
+-------------------------------------------------------------------------------------------------------------------
+
+7/11/2021
+
+Created a remote repo in the AWS cloud
+Named the main branch 'master'
+Cloned the repo into C:\Users\willi\AndroidStudioProjects
+The name of the folder is btcbrunchandroidappjava
+Deleted the auto created .git folder in the btcbrunchandroidappjava folder
+Copied everything in MPChart01 into btcbrunchandroidappjava folder
+Ran
+
+git push codecommit::us-west-2://btcbrunchandroidappjava
+
+I see the code in the AWS cloud
+
+*************************************************************************************************************
+
+So if I run
+
+git push -u origin master
+The code will go to Github
+
+If I run
+
+git push codecommit::us-west-2://btcbrunchandroidappjava
+The code will go to AWS
+
+****************************************************************************************************************************
+
+So I managed to get AWS CodeCommit to accept code for the Android UI side and the server side
+Unfortunately I broke the connection between ELI and CodeCommit for the server's code
+This means eb deploy will no longer update CodeCommit automatically
+I have to push all updates to CodeCommit by hand, using git push
+
+Update changes to the Android code:
+git push https://git-codecommit.us-west-2.amazonaws.com/v1/repos/btcbrunchandroidappjava
+
+Update changes to the server:
+git push https://git-codecommit.us-west-2.amazonaws.com/v1/repos/BTCBApi
+
+****************************************************************************************************************************
+
+I checked the server, updates to the server still work by running
+git add .
+git commit -m "my comment"
+eb deploy
+
+So basically the only change is that I need to commit the server's changes separately from deploying
+instead of having the push to CodeCommit happen automatically
+
+And I need to remember the new folder for the app is
+btcbrunchandroidappjava, not
+MPChart01
+
+So to get back to where I was initially, I need to set up a new Elastic Beanstalk environment and set up
+the server again, or I need to find a way to fix the connection to CodeCommit
+
+But neither seems to be necessary at this time
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+7/13/2021
+
+Time to make like a Tech Lead and put in that work boi!!!
+
+Started styling the mpLineChart and the lineDataSet1 instances
+
+------------------------------------------------------------------------------------------------------------------
+
+7/15/2021
+
+Started skimming the MPAndroid tutorials on Youtube by Sarthi Technology
+https://www.youtube.com/watch?v=N-_X6G1KgAY&list=PLFh8wpMiEi89LcBupeftmAcgDKCeC24bJ&index=1
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+7/16/2021
+
+The purple is the orginal color of the buttons in Android
+@color/purple_500
+
+***************************************************************************************************************
+
+Committed the code I am pushing to Google Play store again tonight
+
+Next Step:
+Push the code to Google Play store
+
+Configuring your app for release
+https://developer.android.com/studio/publish/preparing
+
+Generate Signed Bundle APK
+https://developer.android.com/studio/run?authuser=1
+
+Found an article about increasing the version code value in the build.gradle file
+https://developer.android.com/studio/publish/versioning
+
+Sign your app with your key
+https://developer.android.com/studio/publish/app-signing#sign_release
+
+Build > Generate Signed Bundle > APK > Android App Bundle
+Key Store Path: C:\Users\willi\Desktop\BTCAndroidApp\BTCAndroidAppKey\btcbandroidappkey.jks
+
+Once you sign your app at the bottom of the screen you have a message appear
+The message is actually a point and click choice to make to locate the two files you just generated:
+.pepk
+.aab
+
+or analyze the the app bundle
+
+Select locate
+
+It will give you the location of the .aab file, currently:
+C:\Users\willi\AndroidStudioProjects\MPChart01\app\release
+
+You need that when you select
+Create New Release in the Google Play Store
+
+It's pretty straight forward after the app version is published,
+it can be found in the Internal Testing section on the left,
+under the Testers tab. Just copy the link and paste it in a browser and you will get access
+If the page says the app is already installed, just click it again and it will re-install
+
+---------------------------------------------------------------------------------------------------------------
+
+7/20/2021
+
+Found this article for Android Studio and tables:
+
+Android Tutorial - TableLayout | Android Studio
+https://www.youtube.com/watch?v=2q7R3Pt-NCw
+
+
+
+Stumbled into how to style Android buttons
+Make your own custom buttons! | How to make custom buttons in Android Studio
+https://www.youtube.com/watch?v=ERFvSi4T244
+
+Android studio create 8 button style beautiful
+https://www.youtube.com/watch?v=ASY4ymhltTw
+
+---------------------------------------------------------------------------------------------------------------
+
+7/27/2021
+
+Google Play Store error has appeared for multiple users, that their phone needs to have it's cache cleared
+The solution appears to be complex
+
+I was able to use the link with the tablet, no issues
+
+Continue to troubleshoot the source of this problem, see if you can find a link to the code in
+the app or the use of the Play Store to run the trial.
+
+*********************************************************************************************************************
+
+Added the code to the onStart() to compare NDAQ/BTC using this Google Search:
+"select starting item in spinner android"
+
+Basically you just call the .setSelection() method of the spinner. Here 21 is the position of NDAQ in the spinner
+stockSpinner.setSelection(21);
+
+I could have used a variable too like so:
+
+int position = 21
+stockSpinner.setSelection(position);
+
+--------------------------------------------------------------------------------------------------------------
+
+7/28/2021
+
+Next Step:
+Fix the parallel loading problem
+-how to load the data behind the splash screen
+
+Current Solution:
+They will have to wait, so just go to the app
+In the BitCoinVsStocksActivity.java file
+In the onStart() method:
+mpLineChart.setNoDataText("Loading Data...");
+
+Either way the user has to wait while we load data. Better to show the chart than the logo
+
+It would be good if I could animate the ...
+
+****************************************************************************************************************
+
+Splash Screen with AsyncTask
+https://stackoverflow.com/questions/19225969/splash-screen-with-asynctask
+
+java.util.concurrent
+-what is used in place of AsyncTask (deprecated) in Android
+https://developer.android.com/reference/android/os/AsyncTask
+
+Processes and threads overview
+https://developer.android.com/guide/components/processes-and-threads
+
+A way to tap away the Splash Screen
+https://blogactivity.wordpress.com/2012/02/24/writing-splash-screens-the-right-way/
+
+How to do a well-coded splash screen
+https://stackoverflow.com/questions/18218885/how-to-do-a-well-coded-splash-screen
+
+Google this:
+making http calls behind splash screen
+
+
+**************************************************************************************************************
+
+7/30/2021
+
+I want to try to use tables first to present more information on the Cryptos:
+
+Starting with this tutorial:
+Table Layout in Android Studio Example - 40 - Android Development Tutorial for Beginners
+https://www.youtube.com/watch?v=5CJ64o2UBsA
+
+This looks legit:
+TableLayout with RecyclerView in Android Studio latest
+https://www.youtube.com/watch?v=pOeEq6utNU8&t=461s
+
+I'm going to just build them statically and fill them with data
+
+But I may find that I need a dynamic method to build them, in that case this tutorial looks promising
+Create Table Layout Dynamically in android
+https://www.youtube.com/watch?v=MeFGGgCQSaQ
+
+***************************************************************************************************************
+
+Get the values from the tapped data points
+Present them in the UI:
+
+Show value when tapped [MPAndroidChart]
+https://stackoverflow.com/questions/33241952/show-value-when-tapped-mpandroidchart
+
+Last Price
+% change in period
+
+Conferred with Matt on the values he would like rendered in the UI
+-will try to get more options from him in the near future
+
+******************************************************************************************************************
+
+8/4/2021
+
+Implemented interface in the ChartMaker class to get values from click events
+https://stackoverflow.com/questions/34268902/how-to-onclicklisten-mp-android-line-chart-circles
+-OnChartValueSelectedListener is the interface, it is from the mpAndroid library
+-mpLineChart.setOnChartValueSelectedListener(this)
+-this refers to the instance of ChartMaker
+
+*************************************************************************************************************
+
+
+This library is React Native wrapper of popular Android charting library MPAndroidChart.
+https://www.npmjs.com/package/react-native-mp-android-chart
+
+**********************************************************************************************************
+
+Next Step:
+-Create two instances of a collection class for storing the values of the commodity and crypto prices
+-In the populateChart() method push the values of the commodity and crypto prices to their respective
+ collection instances for each iteration of the loop
+-upon triggering the OnChartValueSelected listener, use the x value
+ of the entry object to select the positions to query in the commodity and crypto collection instances
+-return the values in the commodity and crypto collection instances
+-create instances of TextView(s) for the values returned from the commodity and crypto collection instances
+-pass those values returned to the TextViews in the TableLayout
+
+
+
+
+How to update a TextView of an Activity from another class
+https://stackoverflow.com/questions/10996479/how-to-update-a-textview-of-an-activity-from-another-class
+
+This seems like it has a piece of the puzzle:
+Changing an activity TextView text from a class
+https://teamtreehouse.com/community/changing-an-activity-textview-text-from-a-class
+
+-------------------------------------------------------------------------------------------------------------------
+
+8/5/2021
+It appears I need to use a LayoutInflator and get the proper
+context value to access the TextViews in activity_bit_coin_vs_stocks.xml file
+
+
+Some of the articles I started with
+https://stackoverflow.com/questions/4608524/accessing-textview-from-another-class
+https://stackoverflow.com/questions/8323777/using-findviewbyid-in-a-class-that-does-not-extend-activity-in-android
+https://stackoverflow.com/questions/25807205/findviewbyid-in-non-activity-class
+https://stackoverflow.com/questions/3477422/what-does-layoutinflater-in-android-do
+https://stackoverflow.com/questions/33068530/errorattempt-to-invoke-virtual-method-java-lang-object-android-content-context
+https://stackoverflow.com/questions/14948362/how-to-initialize-context
+https://developer.android.com/reference/android/app/Activity?hl=de#getLayoutInflater()
+https://stackoverflow.com/questions/7803771/call-to-getlayoutinflater-in-places-not-in-activity
+https://stackoverflow.com/questions/49467262/android-studio-context-returning-null/50234990
+
+Check this out too:
+https://stackoverflow.com/questions/18279518/layoutinflater-for-using-xml-and-view-class
+https://stackoverflow.com/questions/51729036/what-is-layoutinflater-and-how-do-i-use-it-properly
+https://stackoverflow.com/questions/12132370/is-there-any-difference-between-getlayoutinflater-and-getsystemservicecontex
+https://stackoverflow.com/questions/20994728/what-is-the-correct-way-to-get-layout-inflater-in-android
+https://developer.android.com/reference/android/view/LayoutInflater#from%28android.content.Context%29
+https://developer.android.com/reference/android/content/Context
+https://developer.android.com/reference/android/content/Context#getSystemService(java.lang.String)
+
+Look at this:
+https://stackoverflow.com/questions/40892448/how-to-pass-context
+https://stackoverflow.com/questions/42036278/how-to-pass-context-from-mainactivity-to-another-class-in-android
+https://stackoverflow.com/questions/7880657/best-practice-to-pass-context-to-non-activity-classes
+https://stackoverflow.com/questions/33162348/passing-activity-or-context-to-other-instance
+https://blog.mallow-tech.com/2018/08/best-practices-to-pass-context-and-their-memory-leak-possibilities/
+https://abhiappmobiledeveloper.medium.com/java-and-android-threads-tutorial-for-beginners-7afd849d08b9
+https://stackoverflow.com/questions/3652560/what-is-the-android-uithread-ui-thread
+
+Look at this closely:
+https://medium.com/@banmarkovic/what-is-context-in-android-and-which-one-should-you-use-e1a8c6529652
+https://www.freecodecamp.org/news/mastering-android-context-7055c8478a22/
+https://stackoverflow.com/questions/15658687/how-to-use-onresume
+https://stackoverflow.com/questions/42036278/how-to-pass-context-from-mainactivity-to-another-class-in-android/42036325#42036325
+https://developer.android.com/topic/libraries/architecture/saving-states
+https://stackoverflow.com/questions/39503168/how-do-i-get-the-context-from-within-an-activity-class
+
+-----------------------------------------------------------------------------------------------------------------------
+
+8/8/2021
+
+Completed:
+Made the mpLineChart instance static
+Made the chartMaker instance static
+Make BitCoinVsStocksActivity implement OnChartValueSelectedListener interface
+Implement onValueSelected() method of OnChartValueSelectedListener
+Commit code
+
+To Do:
+
+
+******************************************************************************************************************************
+
+This is what I need to do to create a link between my Elastic Beanstalk environment and an Amazon RDS database
+Example: Launching an Elastic Beanstalk in a VPC with Amazon RDS
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/vpc-rds.html
+
+Using Elastic Beanstalk with VPC endpoints
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/vpc-vpce.html
+
+What is Amazon VPC?
+https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html
+
+Configuring Amazon Virtual Private Cloud (Amazon VPC) with Elastic Beanstalk
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.managing.vpc.html
+
+Using Elastic Beanstalk with Amazon VPC
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/vpc.html
+
+Launching and connecting to an external Amazon RDS instance in a default VPC
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/rds-external-defaultvpc.html
+
+Default VPC and default subnets
+https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html
+
+https://docs.aws.amazon.com/vpc/index.html
+Amazon Virtual Private Cloud Documentation
+
+**************************************************************************************************************************
+
+I believe I have a default VPC, created with the Elastic Beanstalk environment
+-this is correct, that is the default
+
+------------------------------------------------------------------------------------------------------------------------------
+
+8/10/2021
+I believe I have a default VPC, created with the Elastic Beanstalk environment
+
+-the default VPC is really AWS 'speak' for components that are part of a network
+
+VPC
+-Amazon Virtual Private Cloud (Amazon VPC)
+-Enables you to launch AWS resources into a virtual network that you've defined
+-This virtual network closely resembles a traditional network that you'd operate in your own data center,
+ with the benefits of using the scalable infrastructure of AWS.
+
+
+**********************************************************************************************************
+
+I have to redeploy my node-express EC2 because the Linux version is deprecated
+
+I think this article shows me how to do that as painlessly as possible:
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.CNAMESwap.html
+
+These are the versions of Node/Linux you want to use:
+Node.js 12 AL2 version 5.4.4
+64bit Amazon Linux 2 v5.4.4 running Node.js 12
+or
+Node.js 14 AL2 version 5.4.4
+64bit Amazon Linux 2 v5.4.4 running Node.js 14
+
+Before I start working on the database I need to fix this problem because I may need to create a whole new
+environment to attach the database to.
+
+Next Steps:
+
+This is what I need to do:
+Launching an Elastic Beanstalk in a VPC with Amazon RDS
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/vpc-rds.html
+
+---------------------------------------------------------------------------------------------------------------------
+
+8/11/2021
+
+I may need to configure a load balancer again for the new environment
+
+Configuring an Application Load Balancer
+Configuring an Application Load Balancer using the Elastic Beanstalk console
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-cfg-alb.html
+
+************************************************************************************************************************
+
+This is the tutorial to try first
+The create new environment wizard
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-create-wizard.html
+
+** The environment was NOT connected to a VPC by default **
+-you need to push the Configure More Options button in the create wizard's first page
+-click the Edit button in the Network category
+
+** The environment does not contain a load balancer **
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.managing.vpc.html
+-you need to push the Configure More Options button in the create wizard's first page
+-Select High Availability under configuration presets in the create wizard
+-Select all 4 regions for the availability of the Load Balancer
+-you need to configure one, there is not an option to configure the load balancer using the create wizard
+
+Review these:
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.managing.elb.html
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https.html
+
+*****************************************************************************************************
+
+True or False?
+Q. There is a default VPC, but to implement it you have to select it
+A. True, when using the create environment wizard you must Configure More Options > Network > and a default VPN will be created
+
+*******************************************************************************************************
+
+I have to rebuild the code up to where it can be used in the new ELB environment
+-the old files are configured for the old environment
+
+This is the error I get:
+Unable to deploy application version: Configuration validation exception:
+Invalid option specification (Namespace: 'aws:elasticbeanstalk:container:nodejs:staticfiles', OptionName: '/public'): Unknown configuration setting
+
+
+Next Step:
+Create a new version of the application folder that will deploy to a Amazon Linux 2
+
+
+The good thing about the Blue/Green transition is that I can do this over time without bringing anything down
+
+-----------------------------------------------------------------------------------------------------------
+
+8/13/2021
+Like I said in the last statement for the previous log entry, I can come back to the Blue/Green transition
+
+Pivoting: I need to complete the zero cost transition
+
+**************************************************************************************************************************
+
+To update code for the Android portion of app
+git push https://git-codecommit.us-west-2.amazonaws.com/v1/repos/btcbrunchandroidappjava
+
+********************************************************************************************************************
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+8/17/2021
+
+I did not create my Elastic Beanstalk instance with a default VPC. This was an error.
+I need to rebuild the AWS side of the project, including the version of Linux being used to house the Node/Express server
+
+Switching server side to find a solution
+
+----------------------------------------------------------------------------------------------------------------------------
+
+8/29/2021
+
+Pushing code to Google Play
+-went to build.gradle file and changed the following attribute values from 4 and "1.0" respectively
+        versionCode 5
+        versionName "1.0.1"
+
+Pushed the new version to Google Play
+
+Configuring your app for release
+https://developer.android.com/studio/publish/preparing
+
+Generate Signed Bundle APK
+https://developer.android.com/studio/run?authuser=1
+
+Found an article about increasing the version code value in the build.gradle file
+https://developer.android.com/studio/publish/versioning
+
+Sign your app with your key
+https://developer.android.com/studio/publish/app-signing#sign_release
+
+Build > Generate Signed Bundle > APK > Android App Bundle
+Key Store Path: C:\Users\willi\Desktop\BTCAndroidApp\BTCAndroidAppKey\btcbandroidappkey.jks
+
+Once you sign your app at the bottom of the screen you have a message appear
+The message is actually a point and click choice to make to locate the two files you just generated:
+.pepk
+.aab
+
+or analyze the the app bundle
+
+Select locate
+
+It will give you the location of the .aab file, currently:
+C:\Users\willi\AndroidStudioProjects\MPChart01\app\release
+
+You need that when you select
+Create New Release in the Google Play Store
+
+It's pretty straight forward after the app version is published,
+it can be found in the Internal Testing section on the left,
+under the Testers tab. Just copy the link and paste it in a browser and you will get access
+If the page says the app is already installed, just click it again and it will re-install
+
+
+Found out how to be able to send the download link to whoever I want, had to update this:
+In Google Play > Internal App Sharing > Manage Testers > Choose who can download and install apps >
+Select "Anyone you shared the link with can download"
+
+Downloadable link:
+https://play.google.com/apps/test/com.btcbrunch/5
+
+App not available yet, wondering why:
+https://support.google.com/googleplay/android-developer/answer/9844679?hl=en
+https://www.youtube.com/watch?v=gAiu76l4-7s
+https://wikitechsolutions.com/40276/how-to-fix-google-play-item-not-found
+https://stackoverflow.com/questions/60275388/upload-apk-in-internal-app-sharing-in-google-play-console-but-item-not-found
+https://stackoverflow.com/questions/59639663/how-much-time-does-it-take-for-an-android-app-to-appear-on-google-play-store-aft
+https://stackoverflow.com/questions/57478894/how-to-enable-internal-app-sharing-for-android
+
+Was finally able to confirm the issue is with Google Play Store app
+-the app must be up-to-date
+-the user's version of Google Play must have internal app sharing turned on, and their phone must be enabled as a Developer
+
+----------------------------------------------------------------------------------------------------------------------------
+
+9/22/2021
+
+Set up the skeleton for the API calls to the /DAILY_COMMODITIES_LIST endpoint
+
+Realized I would need to rewrite the methods to try to reach the database and the method that mutated the data
+-I am not adding data to the MPLibrary LineChart directly, I am sending this data to the database
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+9/23/2021
+
+Tested the calls and did not receive data. Realized I needed to check the btcbapi.com server to see if it was secure (https)
+
+It is not
+
+Android will not make calls to an http server, I need to make the btcbapi.com Elastic Beanstalk environment https
+I can not get http request to work on android 10 api 29 or api 30. It does work with lower apis though
+https://stackoverflow.com/questions/63045011/i-can-not-get-http-request-to-work-on-android-10-api-29-or-api-30-it-does-work
+
+Next Steps:
+Starting at line 1911 in the Express server diary:
+
+Configuring HTTPS for your Elastic Beanstalk environment
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https.html
+
+Using Elastic Beanstalk saved configurations
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-configuration-savedconfig.html
+
+Configuring your Elastic Beanstalk environment's load balancer to terminate HTTPS
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-elb.html
+
+**************************************************************************************************
+
+In order to configure the Elastic Beanstalk environment for HTTPS, in
+AWS you need to go to:
+Elastic Beanstalk > Environments > node-express-env > Configuration
+
+In Configuration you must click Add Listener to add https, but...
+...you must have a SSL certificate.
+
+I do not.
+
+This is the next big step in the configuration of HTTPS for the Elastic Beanstalk environment
+
+AWS Certificate Manager Documentation
+https://docs.aws.amazon.com/acm/index.html
+
+AWS Certificate Manager
+https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html
+
+AWS Certificate Manager Private Certificate Authority
+https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html
+
+**************************************************************************************************
+
+Start here:
+What Is AWS Certificate Manager?
+https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html
+
+Started there and arrived here:
+Requesting a public certificate
+"The following sections discuss how to use the ACM console or AWS CLI to request a public ACM certificate."
+https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html
+
+And this is the way AWS prefers it:
+Option 1: DNS validation
+https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html
+
+
+******************************************************************************
+
+Troubleshooting certificate requests
+https://docs.aws.amazon.com/acm/latest/userguide/troubleshooting-cert-requests.html
+
+Certificate request fails
+https://docs.aws.amazon.com/acm/latest/userguide/troubleshooting-failed.html
+
+Certificate request times out
+https://docs.aws.amazon.com/acm/latest/userguide/troubleshooting-timed-out.html
+
+************************************************************************************************
+
+AWS Certificate Manager
+AWS Certificate Manager (ACM) makes it easy to provision, manage, deploy, and renew SSL/TLS certificates on the AWS platform
+https://us-west-2.console.aws.amazon.com/acm/home?region=us-west-2#/firstrun/
+
+Validating domain ownership
+https://docs.aws.amazon.com/acm/latest/userguide/domain-ownership-validation.html
+
+Created a certificate for *.btcbrunchapi.com and btcbrunchapi.com
+
+To see the certificate type ACM into the AWS search bar
+
+Now I can continue to make the site https
+
+********************************************************************
+
+What is a Classic Load Balancer?
+https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/introduction.html
+
+Configure your Classic Load Balancer
+https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-configure-load-balancer.html
+
+Listeners for your Classic Load Balancer
+https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-listener-config.html
+
+HTTPS listeners for your Classic Load Balancer
+https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-https-load-balancers.html
+
+Monitor your Classic Load Balancer
+https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-monitor-logs.html
+
+**********************************************************************************************
+
+Couldn't figure out why the btcbrunchapi.com was still Not Secure
+
+Found the solution in this article:
+Configuring your Elastic Beanstalk App for SSL
+https://medium.com/@jameshamann/configuring-your-elastic-beanstalk-app-for-ssl-9065ca091f49
+
+I needed to enter https://btcbrunchapi.com
+
+The SSL padlock appeared in the browser
+
+**************************************************************************************************
+
+For now though, the call that I wrote works, now that I'm calling http and not https and I have:
+android:usesCleartextTraffic="true" in my manifest inside <application> tag
+
+This will not work when I want to upload to the Google Play store, I need to make the server https
+
+Next Steps:
+Complete parsing the BTC array on the server side, sending just the daily close datapoints as the "value" array
+Begin to load the SQLite database with the values brought over
+
+--------------------------------------------------------------------------------------------------------------------------
+
+9/26/2021
+
+Using Youtube videos to create and load the database
+
+Save data into SQLite database [Beginner Android Studio Example]
+https://www.youtube.com/watch?v=aQAIMY-HzL8
+
+SQLite Database for Android - Full Course
+https://www.youtube.com/watch?v=312RhjfetP8&t=1128s
+
+--------------------------------------------------------------------------------------------------------------------------
+
+9/28/2021
+
+Continuing to build the database app-side.
+
+Check this out:
+How to store JSON object in SQLite database
+https://stackoverflow.com/questions/16603621/how-to-store-json-object-in-sqlite-database
+
+This article has a lot of links and answers:
+Store JSON object response from server in to sqlite database [duplicate]
+https://stackoverflow.com/questions/11394041/store-json-object-response-from-server-in-to-sqlite-database
+
+The data is successfully loading into SQLite when the application is started
+
+---------------------------------------------------------------------------------------------------------------
+
+9/29/2021
+
+Thinking about the database led me to this question:
+
+Sqlite database lifecycle? It is deleted when the app is closed?
+https://www.py4u.net/discuss/691452
+
+Answer #3:
+what happens if the app is closed or the phone is off?
+Answer is No, database not deleted, your data is only deleted when you Uninstall
+the Application or Clear data from Application->Manage Application->Application_Name from your device.
+
+
+Answer #4:
+When a database is created it lives in your applications private file store and is
+only deleted when you explicitly delete it (using Context.deleteDatabase) or
+when your application is uninstalled.
+
+**************************************************************************************************
+
+SQLite Database Tutorial Android Studio | Insert, Delete, Update and View Data in SQLite Database
+https://www.youtube.com/watch?v=9t8VVWebRFM&t=466s
+
+Created CRUD methods from the video above
+
+Also created GetData() method in the BitCoinVsStocksActivity
+It does retrieve data from SQLite database in the form of cursors
+It looks like the app creates two databases, I need to debug that
+
+--------------------------------------------------------------------------------------------------------------
+
+9/30/2021
+
+Because of the logic of the code, I need to complete the queries to the database on the server side
+I must include the crypto values into the database in the AWS cloud
+The Android code has the crypto value queried before the commodity value, so to progress I need to pull all the data
+
+Created the endpoints for the crypto data on the AWS Server
+btcbapi.com/addcrypto1 to btcbapi.com/addcrypto25
+
+Thought I needed to duplicate some of the boilerplate to bring in the rest of the data
+Realized that was incorrect, and that the way the database pull works is perfect, the data is already gathered
+I have one method, dailyCommoditiesDataFunction(), doing all the work of the API calls I'm making with Volley to start the app
+All it needs to do is query the AWS server when the app is opened, as it does, and it gets the table of data
+
+*********************************************************************************************************************************
+
+The current GET method calls everything in the SQLite table for the commodities and cryptos
+I want a second GET method that calls one row of the table, based on the name of the commodity/crypto
+
+I need to trace down the position in the code where the commodity/crypto string literal is used to define endpoint values
+I need to substitute those existing code portions with code that supplies values from the database
+Instead of making API calls to retrieve data values, the code will query the SQLite database on the phone
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10/7/2021
+
+Created the Commodities class to store the values from the response array for dailyCommoditiesDataFunction(JSONArray response)
+Now I have an array returned with Commodities instances that can be used in BitCoinVsStocksActivity and also thus by the CommoditySelector
+This is important because the CommoditySelector does more than just select tickers
+It currently stores an arraylist of Entry objects for each commodity in the list
+-it gets those values from the API calls and uses them to create the chart
+
+As I have it now, I am creating an arraylist of Commodity objects, not Entry objects
+But if I can take each of these Commodity objects arrays and convert their data to this format I can use
+my current code to load the MPAndroid chart
+
+
+****************************************************************************************************************************************************************
+
+Keeping the Commodities class for now, but I may not even need it
+
+It could be I need to add some of this code:
+
+    private ArrayList<Entry> cornDataFunction(JSONObject response) {
+        ArrayList<Entry> cornVals = new ArrayList<>();
+        try {
+            for (int i = 0; i < response.getJSONArray("data").length(); i++) {
+                cornDataObj = new JSONObject[] {response.getJSONArray("data").getJSONObject(i)};
+                double coData = cornDataObj[0].getDouble("open");
+                cornVals.add(new Entry(i, (float) coData));
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return cornVals;
+    }
+
+to the dailyCommoditiesDataFunction() and have everything I need for now.
+This code shows me how to convert the response objects to an ArrayList<Entry>
+and have those values available by the time the user makes their first selection
+
+I would have the
+
+'if' portion of the code completed for the first daily use of the app, which will use the API response to populate the table
+
+But I will still need to figure out the
+
+'else' portion of the code which is for using the data now stored in SQLite for any further queries on the dataset
+
+Maybe that is where the Commodities class may be useful?
+For now it stays because I like the elegance of it's solution and the way it passes data
+
+****************************************************************************************************************************************************************
+
+
+It also looks like the dailyCommoditiesDataFunction() should return an arraylist of type Entry
+ArrayList<Entry>
+
+and the code inside that method would involve the conversion from response to ArrayList<Entry>
+
+****************************************************************************************************************************************************************
+
+
+Next Step:
+
+Write the setDailyCommoditiesVals method that you will be adding to the CommoditySelector class
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10/8/2021
+
+Realized the other half of the API calls can be found in the CryptoSelector
+I need to rewrite that logic also
+
+**************************************************************************************************************************************************************************
+
+The data that I'm sending over to Android is too raw to use
+It needs to be cleaned up server side before it is put in the database
+I need clean arrays, not dirty ones
+
+Each array should only have the values needed for display, right now I have bulk data
+
+Actually the commodity values are properly cleaned over on the server
+It is the crypto values that need cleaning
+
+****************************************************************************************************************************************
+
+Learned something important about Java:
+When you create instances of an object and add them to an arraylist, if you use .getClass() on that arraylist for a
+particular instance of the arraylist, it will tell you what the name of the class is, BUT you won't be able to call
+the methods of the class!
+
+You need to cast the arraylist's instances to the class in question
+
+****************************************************************************************************************************************
+
+10/9/2021
+
+Completed updating the server and cleaning up the data
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10/12/2021
+
+Set up the scratch code for the method that will be used for each commodity
+Testing with XOM
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10/13/2021
+
+Realized I might need to use some Regex to get the values parsed
+Also, I don't think I'll be using the response object, it looks like the Commodities class is saving the day
+I can grab those values for each method, do some Regex to pull out the values and supply those values
+to the ArrayList<Entry> array for the method
+
+The data is a string that looks like a JavaScript array, but this is Java
+I think I need to remove the "[" and "]" characters from the front and the back of the <value> properties value:
+
+How to remove first and last character of a string?
+https://stackoverflow.com/questions/8846173/how-to-remove-first-and-last-character-of-a-string/8846218
+
+Java String to String Array Example
+https://www.java-examples.com/java-string-string-array-example
+
+https://stackoverflow.com/questions/9101301/how-to-convert-string-array-to-double-array-in-one-line
+How to convert String Array to Double Array in one line
+
+I might need to strip the data down to variables that I try to convert one by one from String to double to float
+with each pass through the loop
+
+1. Clean up the array by removing unwanted characters like "[" and "]" and "," so that it is nothing but values and spaces
+2. Use the .split() method to convert the values from a string to a string array
+3. Convert the string array to an array of doubles
+4. Iterate through the doubles array and pass the values to the ArrayList<Entry> array as float values
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10/14/2021
+
+Created the boilerplate for the functions that create the ArrayList<Entry> instances for each commodity
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10/16/2021
+
+Successfully loading the app using the single query to grab all commodity data at the start
+-the "if" portion of the code for creating the chart the first time
+
+Next Step:
+-Start the "else" portion of the code that checks the database
+
+Check out this article:
+How can i check to see if my sqlite table has data in it?
+https://stackoverflow.com/questions/4397757/how-can-i-check-to-see-if-my-sqlite-table-has-data-in-it
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10/17/2021
+
+Realized I need to close the cursors and the database. But I need to make sure to do it at the right time
+
+Closing Cursor in function that returns Cursor
+https://stackoverflow.com/questions/50483312/closing-cursor-in-function-that-returns-cursor?rq=1
+
+Otherwise the code may suffer from memory leaks
+
+Learned the Emulator actually stores the application and user data
+In order to remove the application I need to wipe the user data
+
+How to find and clear the SQLite db file in Android (emulator)
+https://stackoverflow.com/questions/6338976/how-to-find-and-clear-the-sqlite-db-file-in-android-emulator/6338994
+
+If I stop and start the application in Android Studio the database is still saved on the Emulator's device:
+Pixel_3a_API_30_x86
+
+After I wiped the data and restarted the emulator the app crashed when I started the phone and the app
+
+The database was also empty
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+10/18/2021
+
+I figured out how to check if the database is empty, and if it is to load the database
+
+The else statement is failing:
+
+If you look at this line
+commoditySelector.setDailyCommoditiesVals(dailyCommoditiesDataFunction(response));
+
+dailyCommoditiesDataFunction() should be returning a ArrayList instance dailyCommoditiesVals,
+but those values are not filled like they are in the 'if'.
+
+We need to fill those values by querying the database and mimicking the process in the if statement
+But the logic of the 'if' side is good now
+
+Just for fun I commented out the 'if/else' just to have a running app
+
+Next Step:
+Bring back the if/else
+Create the logic that queries the existing database to populate the values for dailyCommoditiesVals
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+10/19/2021
+
+Started reading this information on the Cursor object:
+
+Android Developers > Docs > Reference > Cursor
+https://developer.android.com/reference/android/database/Cursor
+
+The cursor is a 2d representation of the data in the table
+I can use the methods of the cursor to pull the data from the table and push it to the dailyCommoditiesVals arraylist
+using the same for loop logic in the 'if' statement
+
+Load these variables with the same logic and pass them to the commoditySelector
+
+    ArrayList<Entry> dataVals2;
+    ArrayList<Entry> cornVals2;
+    ArrayList<Entry> appleVals2;
+    ArrayList<Entry> soybVals2;
+    ArrayList<Entry> sugarVals2;
+    ArrayList<Entry> amazonVals2;
+    ArrayList<Entry> boeingVals2;
+    ArrayList<Entry> bloombergCottonVals2;
+    ArrayList<Entry> invescoDbOilVals2;
+    ArrayList<Entry> duPontVals2;
+    ArrayList<Entry> consolidatedEdisonVals2;
+    ArrayList<Entry> vanEckVectorsGoldMinersVals2;
+    ArrayList<Entry> alphabetVals2;
+    ArrayList<Entry> nyseVals2;
+    ArrayList<Entry> sAndP500Vals2;
+    ArrayList<Entry> sAndP500GrowthVals2;
+    ArrayList<Entry> uSEnergyVals2;
+    ArrayList<Entry> teucriumGrainVals2;
+    ArrayList<Entry> bloombergCoffeeVals2;
+    ArrayList<Entry> jPMorganChaseVals2;
+    ArrayList<Entry> cocaColaVals2;
+    ArrayList<Entry> microsoftVals2;
+    ArrayList<Entry> nasdaqVals2;
+    ArrayList<Entry> globalXSilverMinersVals2;
+    ArrayList<Entry> vanEckVectorsSteelVals2;
+    ArrayList<Entry> unitedHealthGroupVals2;
+    ArrayList<Entry> exxonMobilVals2;
+    ArrayList dailyCommoditiesVals2;
+
+Basically I'm just tweeking the 'if' statement a little bit, but using the same methods to load the data
+into the commoditySelector object
+
+I can modify the code to pass back the date values and check those values later
+
+***********************************************************************************************************************************
+
+Used this article to learn how to iterate over the cursor:
+
+Working with Databases in Android
+https://www.informit.com/articles/article.aspx?p=2731932&seqNum=4
+
+Once I got the output realized I want to UPDATE the database in the else statement, not GET
+-otherwise the table just keeps growing and growing
+
+****************************************************************************************************************************
+
+So in onStart() GetData() gets called.
+It checks for data in the database
+-if it is empty, it creates a table and gathers data for the business logic from the API query
+-if it finds the table with data it uses that table to gather data for the business logic
+
+It is pretty close to correct, there are additional calls to BTC that are appearing, I think because BTC is still on it's own API query
+
+Next Steps:
+-Use the one Api call to get the crypto data needed to render the MPAndroid chart
+-Try to remove the BTC Api call, use nothing but the one call
+-Add date data to the process of the 'if/else' upon opening the app
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+10/20/2021
+
+Interesting tutorial here on setting up a proxy server from Traversy:
+Build an API Proxy Server - Hide Your API Keys, Rate Limiting & Caching
+https://www.youtube.com/watch?v=ZGymN8aFsv4
+
+The rate limiting and the caching might be helpful
+
+**********************************************************************************************************************************
+
+Switching over to the crypto side to figure out how to use the database or API call to load the data
+
+That makes me think: which one should I use and when? Are they both options?
+
+It appears that the database will be available
+-GetData() is called in the onStart(), before any onClick() methods can be called, but is that true?
+
+Can I call the onClick() during onStart() before the database is loaded?
+-My guess is that it may be possible, but I think it is unlikely
+
+So if the database is available, I can use it
+
+It appears I need to get rid of the API call and the JSONArrayRequest instance, but keep the logic in the call
+
+I made the mDatabaseHelper instance static to be able to call it and it's methods in the CryptoSelector object
+Now I should be able to use the cursor to pull in the data from the database depending on the crypto selected
+I will be making a new Cursor instance with each selection, but this doesn't seem like it will be too expensive
+I will need to learn how to format the data so that it matches what is already in the commoditySelector.selectCommodity() method
+
+Otherwise I think the application may be finished in terms of core logic
+The rest will be additional features and smoothing out the logic
+I also need to create the Admin page or automate the daily call
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+10/21/2021
+
+Working on the crypto side
+
+Completed:
+I need to declare a tickerDataFunction2() that instead of taking a JSONArray response instance accepts a String[] array
+I need to pull the row from the database that has the BTC value:
+This string will need to have the tokens "[" and "]" removed from the front and back
+I need to replace all the commas with nothing
+I need to .split() to create an array of the remaining values
+I need to feed that array to the tickerDataFunction2() as an String[] array argument
+I need to implement the same logic in tickerDataFunction(), but fill the candlestick properties
+ -with dummy values if necessary, or leave empty if allowed
+ -maybe I need to provide default values?
+I need to copy in the remaining logic in the API call for BTC
+
+I have a bug which is me sending 365 days of data regardless of what button I push
+But there is a fix
+
+I have a variable named numOfDaysSelected that tells me a number that matches the button
+I can use that value to get the number of values I need from the array and make a subarray of that size
+I can then pass that subarray to tickerDataFunction2()
+
+*************************************************************************************************************
+
+To Do:
+
+Use the numOfDaysSelected variable value to feed a subarray to the tickerDataFunction2()
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+10/24/2021
+
+The Android side now reads from the database to feed the data table for both the commodities
+and the cryptos when the database exists already.
+
+About to run the test for using the database etc on a freshly wiped emulated phone
+
+
+************************************************************************************************************
+
+List of the items in the database, as they appear in the database
+BTC
+CORN
+AAPL
+SOYB
+CANE
+AMZN
+BA
+BAL
+DBO
+DD
+ED
+GDX
+GOOG
+ICE
+IVV
+IVW
+IYE
+JJG
+JO
+JPM
+KO
+MSFT
+NDAQ
+SIL
+SLX
+UNH
+XOM
+ETH
+BCH
+LTC
+BNB
+ADA
+DOGE
+XRP
+DOT
+UNI
+SOL
+LINK
+MATIC
+ETC
+HNT
+THETA
+VET
+XLM
+ZEN
+FIL
+ZIL
+WAVES
+EOS
+AAVE
+ENJ
+
+***********************************************************************************************************************
+
+Not waiting anymore on fixing the last BTC call, or any of this stuff... I need another pair of eyes
+
+In other words going to skip 1 and 2 and go to 3 for the time being:
+1. Use the one Api call to get the crypto data needed to render the MPAndroid chart
+2. Try to remove the BTC Api call, use nothing but the one call
+3. Add date data to the process of the 'if/else' upon opening the app
+
+Next Step:
+Reload the table in the database so you can see how accurate all the data is
+
+*****************************************************************************************************************************
+
+Found the numOfDaysCrypto variable, this gives me access to the button value selected, and thus the size of the
+collection I need to create
+
+Not sure exactly what those objects are or if I will have to break them down and rebuild a new sublist, but I
+am sure that from this position in the code I can create the sublist and pass it along as before,
+now with the same correct position of the daily values as the crypto currencies
+
+Found the solution to this on 10/26/2021
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+10/26/2021
+
+This article showed me the correct way to make the commodities arrays be the same size and plot the same dates as the cryptos.
+I was correct that I needed to create sublist of the ArrayList
+But once I created the sublist I had issues with types and casting
+
+This article solved those issues:
+Converting a subList of an ArrayList to an ArrayList
+https://stackoverflow.com/questions/16644811/converting-a-sublist-of-an-arraylist-to-an-arraylist
+
+The modification works, going to copy to all commodities in the app
+
+I now completed the main logic of the application both the server side and the app side
+There are issues to be addressed, but the main idea is intact and runs well.
+
+*************************************************************************************************************************************
+
+The API for commodities is showing eod data.
+The problem is that that eod is only for trading days, not seven days a week.
+This means my 365 days of data has holes in it for the weekends. This is screwing up the chart
+
+We are testing a wider range of dates in the commodities than we are in the cryptos.
+
+I need daily prices, not business day prices
+
+But the logic of creating the subarrays is correct, no worries there.
+
+I need to rewrite the original query on the server to fix the issue
+
+Here are the documentation pages for the APIs:
+https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md
+https://marketstack.com/documentation
+
+The Binance API has a concept called opentime and closetime
+I need to find out what those values are
+
+https://github.com/jaggedsoft/php-binance-api/issues/9
+
+Confirmed that the crypto data is everyday, while the commodity data excludes weekends(and maybe holidays?)
+
+I need to line the data up date for date in the chart
+
+*****************************************************************************************************************************************
+
+I think I have a solution to the problem of the missing data.
+I need to pull more crypto than 365, I'll determine that number
+I then need to remove the data points that are weekends or holidays and do not show up in the commodity arraylist
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+11/22/2021
+
+Back to this side of the app
+
+On first check using MSFT vs. Bitcoin the data looked accurate
+
+The value on the far right side matches with the values supplied by Google for MSFT's closing values
+And where there is no value tracked because of the weekend, the chart is using the close values from the algorithm
+
+On second check, only BTC is rendering correctly
+The other cryptos are all rendering the same values
+
+The issue was a one off error, I fixed it and everything is rendering properly
+
+Except:
+The AAPL array is backwards
+All the other commodity/stock data is facing the correct way
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+11/25/2021
+
+Data is coming across correctly and up-to-date with the latest available data
+
+I am ready to move on to displaying the date data that is available to
+be gathered server side.
+
+I am switching to calling the crypto price the End Of Day price
+
+I also notice I am using a <TableLayout></TableLayout> element to manage the data I will be displaying
+in this region of the UI
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+11/26/2021
+
+The main push I need to complete is getting the date values into the display
+
+There are two ways to do this:
+1. I could calculate the date Android side
+2. I could use the date values from the server
+
+I like the second option more, I think it would be easier to control and I know the date data is accurate
+
+I also need to build out the XML, but that is the simpler part.
+Returning server side to pass over the code to the Android side
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+11/27/2021
+
+I found the code in app for AAPL on the Android side and yes, it does reverse the array
+-will deal with this later, should be able to remove both reverses in the two code bases?
+
+Next Steps:
+Add the new table value to the SQLite database table
+Bring in the date data values to the Android app
+Present the date data the same way you present Close and End Of Day in the XML
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+11/28/2021
+
+Going to bring over the date and rangeVal columns to the Android app side
+
+Determined that the date values are strings
+The rangeVal values appears to be arrays of strings
+
+*****************************************************************************************************************************************
+
+I have everything set up for completing presenting date information in the UI
+
+Now I can complete the XML, give the widgets ids, then pass the values of the date into the UI
+
+I will need to access the position in the array where the date string is and change it's format,
+but otherwise everything is good.
+
+I think this app is finally close to completion!
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+11/29/2021
+
+Successfully System.out'ing the value in the array that matches the e.getX() value selected when the user touches the screen
+
+Completed:
+Create the XML that will display the date
+Create the Java code that will reference the XML
+Pass the values of the array to those elements in the Java code
+
+************************************************************************************************************************************
+
+There is a bug
+
+The solution works for 365 data, but for smaller values the array is too large
+I need to create subarrays of the 365 sized array for each of the time periods
+
+The start of these arrays will all be somewhere in the middle of the array to the end of the array
+The length will depend on the time period selected
+
+I created a static variable, currentBtn. This variable stores the value of the time span selected
+
+I need to create a switch switch statement inside the onValueSelected() method
+For each switch end, I need to add an appropriate value to the value of e.getX() so that the correct position in the date array is selected
+
+ex. if the last button selected is the 7D button, then when a plot point is selected, we do something like this:
+
+        commodityDateValTextView.setText(holderArr[(int) e.getX()] + 358);
+        cryptoDateValTextView.setText((holderArr[(int) e.getX()]) + 358);
+
+
+That should cover all 7 possible plot points in the chart, and
+return the correct date matching the plot point's position relative to 365 sequential positions
+
+
+    The formula is 365 - currentBtn
+    So when currentBtn is equal to:
+    7: add 358
+    14: add 351
+    30: add 335
+    90: add 275
+    180: add 185
+    and 365 already works correctly
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+11/30/2021
+Successfully creating the subarrays for the time periods that the buttons represent
+
+The dates that appear in the UI match the expected positions for each plot point based on time frame selected and what that time period covers
+
+The core of the app is truly done
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+12/2/2021
+
+There was an issue/bug with loading data into the app
+
+Not sure what caused it, it could have been an issue with connectivity or AWS
+-there WERE errors in the AWS server --> "an upstream response is buffered to a temporary file"
+This apparently involves NGINX
+
+Not sure if that is the cause of the issue though
+
+And in the Elastic Beanstalk environment main window, 4 out of 5 http calls were failing
+-not sure if that is the issue either
+
+the dailyCommoditiesVals variable is null when I start the app and load the data from the database
+-not sure what that means either, but it kind of makes sense
+
+Not sure why I have to restart the app a billion times after I wipe the data before the data comes over
+
+*****************************************************************************************************************************************************
+
+Also on 12/2 when I loaded the data to the RDS server again
+-the array of dates ended on 11/30, two days behind. Why?
+
+The commodity/stock price data was actually up to date though. Why?
+
+Lots of issues.
+
+If I wipe the data now, I think I'll have the bug again
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+12/7/2021
+
+Looks like I might have to melt down the project.
+The emulator won't run, and I'm still having the issue pulling over the data to the app
+
+Thinking it might make sense to rebuild the project in a new folder, and go piece by piece recreating the code
+
+There are a few benefits to this approach:
+1. I get to see Android development from the start of a project again. This would be the perfect review and might show me the finer details of writing Android code
+2. I could debug the use of a separate Volley call for the BTC values
+3. I could debug the double loading issue I have with the application
+4. I could review the process for creating an app and loading it to the Google Play store
+
+But I also would like to know what would happen if I only send over ONE array with the date data, instead of sending over the date data with each entry
+into the RDS table.
+
+Would that fix the issue?
+
+Also is there a way to repair the issue with the emulator?
+Can I fix the issue and compile the code?
+
+That is why the nuke sounds better. Why not just rebuild what I have?
+If time isn't the issue, then who cares?
+
+Or, I could fix the issue with the server not being secure and make the calls https
+That could be a workaround to the whole issue with the server, it may still be that the errors were caused by this issue
+
+Also realized that the Firebase errors existed because logcat was set to firebase somehow.
+-I don't think those logs are the real log errors I need to worry about
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+12/13/2021
+
+Tried to stop the antivirus from checking the Android files per this article:
+https://developer.android.com/studio/intro/studio-config?utm_source=android-studio#antivirus-impact
+
+*******************************************************************************************************
+
+Found out that the Android Studio update to Artic Fox is in fact breaking the Emulator for users
+
+https://stackoverflow.com/questions/67346232/android-emulator-issues-in-new-versions-the-emulator-process-has-terminated
+There is an answer in this article that directs you here:
+https://stackoverflow.com/questions/67346232/android-emulator-issues-in-new-versions-the-emulator-process-has-terminated/68622341#68622341
+
+
+"Faced this issue after update to arctic fox.
+
+After seeing error message about termination, open android studio logs
+
+("C:\Users\YourUserName\AppData\Local\Google\AndroidStudio2020.3\log\idea.log")
+
+scroll it down and try to find log line with text "Emulator terminated with exit code". Probably, the reason for termination can be found a few lines above this message - for me it was
+
+"Emulator: cannot add library vulkan-1.dll: failed". 
+
+If you have the same reason - go to C:\Windows\System32 directory, search here for file called vulkan-1-999-0-0-0.dll and just rename it to vulkan-1.dll (i've made a copy just in case and named it "vulkan-1.dll").
+
+This fixed the issue for me."
+
+
+Attempting the same fix
+
+*******************************************************************************************************************************************************
+
+The fix for the Emulator seems to have worked and I'm back to debugging the null value error
+
+This seems to center around these errors:
+Could not connect to the 'pipe:qemud:network' service: Invalid argument
+qemu_pipe_open_ns:62: Could not connect to the 'pipe:qemud:wififorward' service: Invalid argument
+
+and the idea of using 
+
+android:usescleartexttraffic
+
+which I am already using and was using from the start to pull over the data
+
+Starting to think that now instead of rebuilding the app or digging into the log files for NGINX, I need to start with making the server secure
+It should be using https anyway, need to figure out how?
+
+If that doesn't resolve the issue then so what? At the least the server is secure 
+and the users will know it if they trace the calls from the app somehow
+
+*******************************************************************************************************************************************************
+
+Next Step:
+Make the server use https, then remove the 
+
+android:usescleartexttraffic
+
+attribute and see if the null value error disappears
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+12/15/2021
+https://proandroiddev.com/compilesdkversion-and-targetsdkversion-what-is-the-difference-b4227c663ba8
+
+******************************************************************************************************************************************************
+
+Realized the errors I'm seeing might be happening for all code and that it may not be a library I added
+-the issue doesn't seem to have much in the way of articles online
+
+Created a new project that I named "Test Everything"
+All it is is a completely fresh project, the code Android supplies when you first create a project
+Sure enough, the same errors appeared about accessing hidden methods and fields
+
+That means these errors are not necessarily related to any libraries in my code
+
+******************************************************************************************************************************************************
+
+Also realized that when you speak of target and compile SDK versions in the gradle build, that is related to the Emulator
+You can create multiple devices to run code with a selected API version, and that version of the Emulator interacts with
+the target and compile versions of your code. That influences the errors you see, and if the hidden method and fields references 
+are light grey to black listed
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+12/16/2021
+Converted the Switch statements in the code to if/else statements because of a potentially breaking issue with Android Gradle Build 8.0
+-the resource id's will no longer be final by default
+
+Used this stackoverflow article:
+https://stackoverflow.com/questions/7840914/android-resource-ids-suddenly-not-final-switches-broken
+
+Google recommends you use if/else conditions
+http://tools.android.com/tips/non-constant-fields
+To change them automatically you can place the caret on the switch keyword and press Alt + Enter on Windows (Option + Enter on Mac) and select Replace 'switch' with 'if'
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+12/17/2021
+
+Started the rebuilding process. Very interesting
+
+The code is more tightly woven than I imagined
+There is also a lot less that I don't understand than I thought
+Also realizing that the simplicity hides the complexity of what I had to do, which is learn how to implement frontend code in Android
+
+***********************************************************************************************************************************************
+
+The rebuilding process is happening quickly also, every class but the BitCoinVsStocksActivity is filled with it's code
+
+Right now the app is breaking here:
+    java.lang.NullPointerException: Attempt to invoke virtual method 'com.android.volley.Request com.android.volley.RequestQueue.add(com.android.volley.Request)' on a null object reference
+        at com.btcbrunch.btcbrunchlinegraphapp.CryptoSelector.selectCrypto(CryptoSelector.java:87)
+        at com.btcbrunch.btcbrunchlinegraphapp.BitCoinVsStocksActivity.onClick(BitCoinVsStocksActivity.java:219)
+
+So I added System.out.println statements at the start of the selectCrypto() method of the CryptoSelector class. Here is the output:
+
+I/System.out: This is the stockSpinnerStrVal value: CORN
+    This is the bitCoinSpinnerStrVal value: BTC
+    This is the numOfDaysBtnSelected value: 7
+    This is the RequestQueue value: null
+    This is the mpLineChart value: com.github.mikephil.charting.charts.LineChart{36d731 V.ED..... ........ 0,30-1080,690 #7f0801ac app:id/line_chart}
+    This is the commoditySelector value: null
+
+Next Step:
+Determine why RequestQueue is null and commoditySelector is null
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+1/8/2021
+
+Took a break, worked on some LeetCode and boxing. Spoke with Matt and we decided to look for debuggers on Fiverr
+
+The debugger I selected doesn't seem to know how to fix the app, starting to think he is lying about the app working on his device
+Taking debugging back into my hands for now, but the process of rubber ducking is leading me back to my last entry in the Test Everything rebuild
+-it seems to point to null values in the RequestQueue and that nothing is being returned from the Volley Api calls
+-I can confirm that back in the original code. When I debug this line:
+                        dailyCommoditiesVals =  dailyCommoditiesDataFunction(response);
+ it is never called. 
+I don't know if this is because the call never occurs, or the response doesn't arrive
+The call is supposed to occur automatically here:
+        requestQueue.add(arrayRequest1);
+
+When I debug that line I do see that data gets passed to the RequestQueue instance, can't tell yet what happens to it
+I would like to see the network call occur somehow
+
+That would explain the error
+
+    java.lang.NullPointerException: Attempt to invoke virtual method 'java.util.List java.util.ArrayList.subList(int, int)' on a null object reference
+        at com.btcbrunch.CommoditySelector.selectCommodity(CommoditySelector.java:396)
+        at com.btcbrunch.CryptoSelector$1.onResponse(CryptoSelector.java:70)
+        at com.btcbrunch.CryptoSelector$1.onResponse(CryptoSelector.java:60)
+
+So I need to figure out why the calls aren't being made
+
+************************************************************************************************************************************************
+
+Important to note that Volley seems to be fully supported by Android
+-it is integrated into the Android website
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+This is how to check for the calls made from the app:
+https://medium.com/android-news/monitor-network-response-on-android-studio-39f572d8703b
+
+Official Android article:
+https://developer.android.com/studio/profile/network-profiler
+
+Extremely helpful!
+
+Just remember you need to select the Network row, and then DRAG over the expanded view and BOOM, you'll see what calls were made
+-if you select a call, you can even see the response data
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+It appears that this call isn't being made:
+http://localhost:3000/DAILY_COMMODITIES_LIST
+
+Incorrect!
+
+It is being made, but a response is not being delivered
+
+mResponseDelivered = false;	//as reported by the debugger for this line:
+requestQueue.add(arrayRequest1);
+
+
+Starting to think more and more the issue is http calls not responded to by Android
+
+**************************************************************************************************************************************
+
+Added this line of code a test and got a response object from the server that was passed through to 
+URL28 = "https://jsonplaceholder.typicode.com/todos/1";
+
+mResponseDeliverd = true;	//as reported by the debugger for this line:
+
+Next Step: 
+
+Convert btcbapi to https in order to fix the error with loading data
+        
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+1/9/2021
+
+btcbapi.com now has a https listener in Elastic Beanstalk
+
+The application is working now, with data being provided by the server at
+
+https://btcbapi.com/DAILY_COMMODITIES_LIST
+
+There is a problem however.
+The first time you try to load the application it fails
+
+The second time it loads
+
+Next Step:
+Determine what the cause of the first start bug is with Fiverr assistance
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+1/10/2021
+
+Completed:
+Cleared the RDS database
+Add the commodities and cryptos to the database again
+See if you can see the new collection of data Android side
+
+Next Step:
+
+*****************************************************************************************************************************************
+
+Successfully pulling over the data to the Android side for
+
+1/10/2021 to 1/10/2022
+
+I need to cancel the order with abis_creations
+I need to find someone who can debug the 1st start breaking bug on Fiverr
+I need someone who can write the daily check on the Android side to load fresh data from the RDS server
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+1/30/2022
+
+Started on the UTC time creation that I will use to check the database with
+If the date of the data in the database is older than the UTC value, then we will drop the table, create a new one, then fill it with
+the most recent data from the RDS database
+
+Using code from this article:
+How can I get the current UTC time online in Android?
+https://stackoverflow.com/questions/11665923/how-can-i-get-the-current-utc-time-online-in-androidv
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+1/31/2022
+
+Created the function CheckDate() to get the date value from the SQLite database
+It returns a string that contains what I need to make a comparison between the date in the database and the current UTC date
+
+Successfully pulling in UTC date into utcDate variable and comparing it to the date values in the database on the phone
+
+These articles were useful:
+https://stackoverflow.com/questions/2810615/how-to-retrieve-data-from-cursor-class
+https://www.edureka.co/community/6307/how-can-i-get-the-current-date-and-time-in-utc-or-gmt-in-java
+
+So far I think the app is rendering accurate data on 1/31
+I need to check back at 5:30pm Mtn time and see where the data is, if it has updated etc.
+Actually 5:30 is incorrect now, since the query isn't happening every 24 hours but every 3 hours
+But at some point today the most recent data points should become available.
+
+The last data point visible in the app right now is 1/30/2022
+Today is Monday 1/31/2022, 10:37 Mtn time.
+The east coast is two hours ahead
+The market closes at 5pm Est
+The market closes at 3pm Mtn
+At some point after 3:30pm Mtn time the RDS database will hopefully update
+
+Is this occurs then I think the app demo is basically complete.
+
+The only bug left is that when a new time period is selected the data displaying in the
+Close Price
+EOD Price
+and Date needs to be cleared back to empty
+
+Completed clearing the data when either the Date Range buttons are touched or the Spinners to select tickers are clicked
+
+App is working beautifully!
+
+The last thing we need is for the data to update from 1/30 to 1/31
+
+Once that happens I will load the app to Google Play again and send Matt the link for the demo
+
+
+*************************************************************************************************************************************************
+
+Realized that I didn't really solve the problem of multiple calls to the API
+
+Any time onCreate() runs, the arrayRequest1 object is created and loaded into the Volley requestQueue instance
+Then the call to the Express API is made
+
+So no amount of checking the database later will stop the call
+
+What my check does do is use the database's data, but the call is still made every time someone opens the app
+
+So what I need to to go further back, to the requests and from there find a way to conditionally load the Volley calls
+
+This may mean the whole app gets restructured, not really sure
+
+Probably means whoever debugs this will just use my existing code and modify when it is called
+
+For now who cares? Even if we had 50 users making 50 calls a day the costs shouldn't increase for the AWS environment
+
+One problem at a time...
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+2/2/2022
+
+Created a HashMap to match Spinner strings to full names of the stocks and commodities
+
+HashMap in Java with Examples
+https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/
+
+Added the names to the UI programatically instead of through XML files.
+Just because the strings appear in the UI it doesn't mean I have to use UI tools!
+
+Used layout weight to fix the issues with the TextViews hogging up odd amounts of space
+Linear Layout
+https://developer.android.com/guide/topics/ui/layout/linear
+
+Sending the app to Fiverr to get professionally styled
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+2/7/2022
+
+Received the UI back, there are some issues but all in all a good job
+I think I can tweek what I have to make it work.
+
+Learned I cannot send an .apk file through gmail
+
+********************************************************************************************************************************************
+
+
+Committed the code I am pushing to Google Play store again tonight
+
+Next Step:
+Push the code to Google Play store
+
+Configuring your app for release
+https://developer.android.com/studio/publish/preparing
+
+You must remember to
+-update the version code value in the build.gradle file
+-update the version name value in the build.gradle file
+-Clean Project and Rebuild Project before you Generate a Signed Bundle
+https://stackoverflow.com/questions/54299273/uploading-android-app-bundle-to-google-play-console-key-signing-error
+
+Generate Signed Bundle APK
+https://developer.android.com/studio/run?authuser=1
+
+Found an article about increasing the version code value in the build.gradle file
+https://developer.android.com/studio/publish/versioning
+
+and this:
+https://stackoverflow.com/questions/68057944/version-code-1-has-already-been-used-try-another-version-code
+
+Sign your app with your key
+https://developer.android.com/studio/publish/app-signing#sign_release
+
+Build > Generate Signed Bundle > APK > Android App Bundle
+Key Store Path: C:\Users\willi\Desktop\BTCAndroidApp\BTCAndroidAppKey\btcbandroidappkey.jks
+
+Once you sign your app at the bottom of the screen you have a message appear
+The message is actually a point and click choice to make to locate the two files you just generated:
+.pepk
+.aab
+
+or analyze the the app bundle
+
+Select locate
+
+It will give you the location of the .aab file, currently:
+C:\Users\willi\AndroidStudioProjects\MPChart01_27January_code\btcbrunchandroidappjava\app\release
+
+You need that when you select
+Create New Release in the Google Play Store
+
+It's pretty straight forward after the app version is published,
+it can be found in the Internal Testing section on the left,
+under the Testers tab. Just copy the link and paste it in a browser and you will get access
+If the page says the app is already installed, just click it again and it will re-install
+
+-------------------------------------------------------------------------------------------------------------------
+
+2/8/2022
+
+Worked on altering the XML
+Seems straight forward enough
+
+Key Ideas
+Going to create a horizontal layout with two squares for name, date, and price data
+gravity denotes the center of the square or linear layout
+shrinking the buttons does give space to the rest of the UI
+The chart should be slightly wider than taller to look more attractive...
+-but it might be more accurate as a perfect square to show the slope of the line, or the rate of change
+weight is the property that I need to add values to, to get the Spinner names to show without wrapping
+Drawables are not just the name for Android pictures
+-they are like Android's version of drawing with SVG in CSS
+-you can create shapes to create layout designs, which is what Arsanali16 did with the UI
+-the Java chart is an easy correction of the values in the ChartMaker
+
+Didn't make any of these changes permanent yet, just fooled with the concepts
+
+---------------------------------------------------------------------------------------------------------------------------
+
+2/10/2022
+
+Created a copy of the code sent by Arslanali16 in a folder called UIDevTestCode
+
+Going to work on the UI here.
+
+*************************************************************************************************************************
+
+I have a rough idea going in the UI, now I need to polish it
+I have the Commodities|Stocks displaying side by side with Crypto data
+Found this helpful:
+https://stackoverflow.com/questions/20000560/android-layout-width-half-of-parent
+-it introduced the concept of weightSum property to me, was useful to get an even split that should scale regardless of device
+
+---------------------------------------------------------------------------------------------------------------------------
+
+2/19/2022
+
+Found out how to hide the ad in Landscape mode:
+
+Hide a field in landscape mode
+https://stackoverflow.com/questions/21419494/hide-a-field-in-landscape-mode
+
+Now I can freely touch the Spinners and Buttons
+
+All I need now is to preserve the Spinner values when I rotate the phone
+
+Try this:
+
+How do I preserve the state of a selected spinner/dropdown item on orientation change?
+https://stackoverflow.com/questions/20209015/how-do-i-preserve-the-state-of-a-selected-spinner-dropdown-item-on-orientation-c
+
+It seems there is something wrong with my implementation of the answer
+Either that or somewhere else in my code I am overwriting my own solution
+
+Next Step:
+
+Check out these answers:
+https://stackoverflow.com/questions/5123407/losing-data-when-rotate-screen
+
+---------------------------------------------------------------------------------------------------------------------------
+
+2/20/2022
+
+Decided to look for some video tutorials on using onsaveinstancestate and onrestoreinstancestate in android
+
+#30 Android Tutorial : Screen Orientation in Android Apps - Part - 1
+https://www.youtube.com/watch?v=2VYlTgaAHTs&list=PLlxmoA0rQ-LyCGSSD_nuPAmXDSR_FU0RR&index=30
+
+**************************************************************************************************************************
+
+Found a solution:
+How to Create Landscape Layout in Android Studio?
+https://www.geeksforgeeks.org/how-to-create-landscape-layout-in-android-studio/
+Method 2 is the correct way to create the layout-land folder
+
+How to handle Spinners when screen orientation changes?
+https://stackoverflow.com/questions/48601676/
+how-to-handle-spinners-when-screen-orientation-changes#:~:text=Add%20android%3AconfigChanges%3D%22orientation,value%20selected%20on%20orientation%20change.
+
+From the correct answer:
+"Add android:configChanges="orientation|screenSize" in your AndroidManifest file, it will keep spinner value selected on orientation change."
+
+But there was a catch, the adView reappeared in the Landscape view
+
+Found this article:
+Admob - How to detect horizontal orientation and hide admob?
+https://stackoverflow.com/questions/4168083/admob-how-to-detect-horizontal-orientation-and-hide-admob
+
+It didn't work, I think because of the configChanges attribute
+-kind of true, I also found I needed to use the onConfigurationChanged method as described here:
+
+How do I preserve the state of a selected spinner/dropdown item on orientation change?
+https://stackoverflow.com/questions/20209015/how-do-i-preserve-the-state-of-a-selected-spinner-dropdown-item-on-orientation-c
+
+Now the Spinner selected stays the same when I rotate the phone and the data stays the same in the MPAndroid chart
+The app is working very well, although the ad slows down the first load
+Also having trouble resizing elements in layout view as long as android:configChanges="orientation|screenSize is set
+But that doesn't matter for the app, time to push it out!
+
+*****************************************************************************************************************************************
+
+Scrap code worth saving
+This way my original attempt to solve the rotation problem:
+//    First attempt to store the Spinner values when the phone is rotated
+//
+//    @Override
+//    protected void onSaveInstanceState(Bundle savedInstanceState) {
+//        super.onSaveInstanceState(savedInstanceState);
+//        savedInstanceState.putInt("stockSpinner", stockSpinner.getSelectedItemPosition());
+//        savedInstanceState.putInt("bitCoinSpinner", bitCoinSpinner.getSelectedItemPosition());
+//
+//    }
+//
+//    @Override
+//    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+//        super.onRestoreInstanceState(savedInstanceState);
+//        stockSpinner.setSelection(savedInstanceState.getInt("stockSpinner"));
+//        bitCoinSpinner.setSelection(savedInstanceState.getInt("bitCoinSpinner"));
+//    }
+
+*****************************************************************************************************************************************
+
+Next Step:
+Prep the application for publishing using the info from 5/21 below:
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Preparing the current demo app for release. Learned this is the correct way:
+
+About Android App Bundles
+https://developer.android.com/guide/app-bundle
+
+This is now the official way to sign your app
+
+And check your release progress against these best practices:
+https://developer.android.com/distribute/best-practices/launch/launch-checklist
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Also look at:
+https://support.google.com/googleplay/android-developer/answer/9859348?hl=en&ref_topic=7072031#zippy=%2Capp-integrity%2Capp-bundles
+https://developer.android.com/quality
+https://play.google.com/console/about/releasewithconfidence/
+
+---------------------------------------------------------------------------------------------------------------------------
+
+2/21/2022
+
+Updated build.gradle file in preparation for loading the app to the Google Play Store
+
+        versionCode 6
+        versionName "1.0.2"
+
+*********************************************************************************************************************************************
+
+Was informed by Arslanali16 that there is a bug that he found when you first start the app
+If you make a date selection too soon the app crashes
+I don't know if I want to pay to fix that at this time, but it would definitely be worth looking into
+
+********************************************************************************************************************************************
+
+Found a starting point for prepping the app for the Google Play Store
+In fact this page is a starting point for the entire process in the official documentation:
+
+https://support.google.com/googleplay/android-developer/answer/9859152?hl=en&ref_topic=7072031
+
+Just do each of the links on the right hand side of the page
+
+Also here is the article I was looking for:
+https://developer.android.com/studio/publish
+
+Go through each of the steps described in the Publish your app section
+
+Next Step:
+Comprehensively cover the info in these two links:
+https://developer.android.com/studio/publish
+https://support.google.com/googleplay/android-developer/answer/9859152?hl=en&ref_topic=7072031
+

@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">BTC Brunch Bitcoin App</string>
+
+    <!-- TEST AD IDS -->
+    <string name="appid">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="bannerid">ca-app-pub-3940256099942544/6300978111</string>
+
+    <!-- REAL AD IDS
+    <string name="appid">ca-app-pub-9953626148563668~3285210133</string>
+    <string name="bannerid">ca-app-pub-9953626148563668/5143224892</string>  -->
+
+    <string-array name="stock_tickers">
+        <item>CORN</item>
+        <item>AAPL</item>
+        <item>SOYB</item>
+        <item>CANE</item>
+        <item>AMZN</item>
+        <item>BA</item>
+        <item>BAL</item>
+        <item>DBO</item>
+        <item>DD</item>
+        <item>ED</item>
+        <item>GDX</item>
+        <item>GOOG</item>
+        <item>ICE</item>
+        <item>IVV</item>
+        <item>IVW</item>
+        <item>IYE</item>
+        <item>JJG</item>
+        <item>JO</item>
+        <item>JPM</item>
+        <item>KO</item>
+        <item>MSFT</item>
+        <item>NDAQ</item>
+        <item>SIL</item>
+        <item>SLX</item>
+        <item>UNH</item>
+        <item>XOM</item>
+    </string-array>
+
+    <string-array name="bitcoin_tickers">
+        <item>BTC</item>
+        <item>ETH</item>
+        <item>BCH</item>
+        <item>LTC</item>
+        <item>BNB</item>
+        <item>ADA</item>
+        <item>DOGE</item>
+        <item>XRP</item>
+        <item>DOT</item>
+        <item>UNI</item>
+        <item>SOL</item>
+        <item>LINK</item>
+        <item>MATIC</item>
+        <item>ETC</item>
+        <item>HNT</item>
+        <item>THETA</item>
+        <item>VET</item>
+        <item>XLM</item>
+        <item>ZEN</item>
+        <item>FIL</item>
+        <item>ZIL</item>
+        <item>WAVES</item>
+        <item>EOS</item>
+        <item>AAVE</item>
+        <item>ENJ</item>
+
+    </string-array>
+</resources>

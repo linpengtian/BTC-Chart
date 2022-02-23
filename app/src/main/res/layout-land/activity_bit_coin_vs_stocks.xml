@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.btcbrunch.BitCoinVsStocksActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width = "match_parent"
+        android:id = "@+id/appbarlayout_tool_bar"
+        android:elevation="10dp"
+        android:layout_height = "wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:background = "@color/lightblack"
+            android:layout_width = "match_parent"
+            android:layout_height = "30dp"
+            app:layout_scrollFlags = "scroll|snap|enterAlways"
+            app:theme = "@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme = "@style/ThemeOverlay.AppCompat.Light">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BTCBrunch"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--The Bitcoin/Stock Line Chart graph-->
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/appbarlayout_tool_bar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="20dp"
+        android:elevation="4dp" />
+
+    <LinearLayout
+        android:id="@+id/button_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_chart"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:weightSum="10">
+        <!--The Query Bitcoin API buttons-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bitcoin_api_button0"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/curve"
+            android:text="7d"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bitcoin_api_button1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/curve"
+            android:text="14d"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bitcoin_api_button2"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/curve"
+            android:text="30d"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bitcoin_api_button3"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/curve"
+            android:text="90d"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bitcoin_api_button4"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/curve"
+            android:text="180d"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bitcoin_api_button5"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/curve"
+            android:text="365d"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bitcoin_api_button5org"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2.5"
+            android:background="@drawable/curve"
+            android:text="365d"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/button_holder1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/button_holder"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:gravity="center"-->
+<!--        android:weightSum="10">-->
+        <!--The Query Bitcoin API buttons-->
+
+
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/bitcoin_api_button3"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_weight="1.5"-->
+<!--            android:background="@drawable/curve"-->
+<!--            android:text="90d"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="12sp" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/bitcoin_api_button4"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_weight="1.5"-->
+<!--            android:background="@drawable/curve"-->
+<!--            android:text="180d"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="12sp" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/bitcoin_api_button5"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_weight="1.5"-->
+<!--            android:background="@drawable/curve"-->
+<!--            android:text="365d"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="12sp" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/bitcoin_api_button5org"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_weight="2.5"-->
+<!--            android:background="@drawable/curve"-->
+<!--            android:text="365d"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="12sp"-->
+<!--            android:visibility="gone" />-->
+
+
+<!--    </LinearLayout>-->
+
+
+    <!--The Spinners for the stock tickers and bitcoin prices/stock prices-->
+    <LinearLayout
+        android:id="@+id/spinner_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:weightSum="10"
+        android:layout_below="@+id/button_holder">
+
+        <Spinner
+            android:id="@+id/stock_spinner"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:gravity="end"
+            android:dropDownWidth="150dp"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/bitcoin_spinner"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:gravity="end"
+            android:dropDownWidth="150dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/commodity_crypto_stats_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_holder"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/curve"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/commodity_text_view_name_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@drawable/curve"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/commodity_text_view_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="left"
+                    android:text="Close:"
+                    android:layout_marginStart="14dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/commodity_text_view_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="left"
+                    android:text=""
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@drawable/curve"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/commodity_text_view_date_label"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:layout_weight="4"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="Date:"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textStyle="bold" />-->
+
+                <TextView
+                    android:id="@+id/commodity_text_view_date_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:text=""
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/curve"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/crypto_text_view_name_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@drawable/curve"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/crypto_text_view_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="left"
+                    android:text="EOD: "
+                    android:layout_marginStart="14dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/crypto_text_view_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="left"
+                    android:text=""
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@drawable/curve"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/commodity_text_view_date_label"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginLeft="10dp"-->
+                <!--                    android:layout_weight="4"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="Date:"-->
+                <!--                    android:textColor="@color/white"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <TextView
+                    android:id="@+id/crypto_text_view_date_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:text=""
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_below="@id/commodity_crypto_stats_table"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <TableRow-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="20dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/commodity_text_view_name_label"-->
+<!--                android:text="Commodities: "-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textStyle="bold">-->
+
+<!--            </TextView>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/commodity_text_view_name_value2"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:textColor="@color/white" />-->
+
+<!--        </TableRow>-->
+
+<!--        <TableRow-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/crypto_text_view_name_label"-->
+<!--                android:text="Crypto Name: "-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textStyle="bold">-->
+
+<!--            </TextView>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/crypto_text_view_name_value"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:textColor="@color/white" />-->
+
+<!--        </TableRow>-->
+<!--    </LinearLayout>-->
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/bannerid">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>
