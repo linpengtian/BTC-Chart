@@ -27,11 +27,12 @@
 <!--            android:configChanges="orientation|screenSize"-->
 
 
-<!--        <activity-->
-<!--            android:name="com.btcbrunch.BitCoinCandleStickActivity"-->
-<!--            android:exported="true"-->
-<!--            android:label="BTC Brunch Candlestick Chart"-->
-<!--            android:parentActivityName="com.btcbrunch.MainActivity" />-->
+        <activity
+            android:name="com.btcbrunch.BitCoinCandleStickActivity"
+            android:exported="true"
+            android:label="BTC Brunch Candlestick Chart"
+            android:parentActivityName="com.btcbrunch.MainActivity" />
+        
         <activity android:name="com.btcbrunch.MainActivity"
             android:exported="true">
             <intent-filter>

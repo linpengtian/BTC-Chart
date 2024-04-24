@@ -1,23 +1,18 @@
 package com.btcbrunch;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.view.View;
-import android.view.Window;
 
-import com.btcbrunch.R;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.cardview.widget.CardView;
 
 
 public class MainActivity extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 1500;
 
-    CardView stockBitCoinCard;
+//    CardView stockBitCoinCard;
 //    CardView candleStickCard;
 
     @Override
@@ -30,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         AppCompatDelegate.setDefaultNightMode(
                 AppCompatDelegate.MODE_NIGHT_YES);
 
+        int SPLASH_TIME_OUT = 1500;
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable(){
             @Override
             public void run() {
@@ -37,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(stockBitCoinCardActivityIntent);
                 finish();
             }
-        },SPLASH_TIME_OUT);
+        }, SPLASH_TIME_OUT);
 
 //        stockBitCoinCard = findViewById(R.id.card_view_stock_bitcoin_selection);
 //        candleStickCard = findViewById(R.id.card_view_candle_stick_selection);

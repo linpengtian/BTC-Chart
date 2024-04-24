@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -140,8 +139,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Cursor checkDate() {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select * from " + TABLE_NAME, null);
-        return cursor;
+        return db.rawQuery("Select * from " + TABLE_NAME, null);
     }
 
 }
