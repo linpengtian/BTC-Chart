@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.btcbrunch">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.MPChart01">
+        android:theme="@style/Theme.MPChart01"
+        tools:targetApi="m">
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/appid"/>
@@ -31,7 +32,8 @@
 <!--            android:exported="true"-->
 <!--            android:label="BTC Brunch Candlestick Chart"-->
 <!--            android:parentActivityName="com.btcbrunch.MainActivity" />-->
-        <activity android:name="com.btcbrunch.MainActivity">
+        <activity android:name="com.btcbrunch.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
